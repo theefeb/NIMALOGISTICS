@@ -1,0 +1,465 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #1e3a8a;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Header Styles */
+  .header {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  /* Add shadow on scroll (JavaScript adds .scrolled class) */
+  .header.scrolled {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .logo {
+    height: 3rem;
+    width: auto;
+  }
+  
+  .company-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+    opacity: 0.9;
+  }
+  
+  /* Hamburger button styles */
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .hamburger::before,
+  .hamburger::after {
+    position: absolute;
+  }
+  
+  .hamburger::before {
+    top: -8px;
+  }
+  
+  .hamburger::after {
+    top: 8px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: block;
+    }
+  
+    .main-nav {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #1e3a8a;
+      flex-direction: column;
+      width: 200px;
+      padding: 1rem;
+      display: none;
+    }
+  
+    .main-nav.active {
+      display: flex;
+    }
+  
+    .nav-link {
+      padding: 0.75rem 0;
+    }
+  }
+  
+  
+ /* Hero Section */
+.hero {
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* dark overlay */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #e0e7ff;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive fallback for mobile */
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
+
+  
+ /* Services Section */
+.services {
+    padding: 5rem 0;
+    background-color: white;
+  }
+  
+  .services-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+.service-card {
+  min-height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  padding: 2rem;
+}
+  
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(30, 58, 138, 0.7);
+  }
+  
+  .service-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    color: white;
+  }
+  
+  .service-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: white;
+  }
+  
+  .service-description {
+    color: #e2e8f0;
+    margin: 0 0 1.5rem 0;
+  }
+  
+  .service-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .service-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+/* Hover effect for all cards */
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Individual card backgrounds */
+.air-freight {
+  background-image: url('images/airfreight.jpg');
+}
+
+.ocean-freight {
+  background-image: url('images/oceanfreight.jpg');
+}
+
+.customs-clearance {
+  background-image: url('images/customsclearance.jpg');
+}
+
+/* Overlay for all cards */
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 58, 138, 0.7);
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effect for overlay */
+.service-card:hover::before {
+  opacity: 0.8;
+}
+  
+  /* Form Sections */
+  .tracking, .booking, .contact {
+    padding: 5rem 0;
+  }
+  
+  .tracking {
+    background-color: #eff6ff;
+  }
+  
+  .booking {
+    background-color: white;
+  }
+  
+  .contact {
+    background-color: #eff6ff;
+  }
+  
+  .tracking-form,
+  .booking-form,
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+  
+  .textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .btn-primary {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+  
+  .btn-primary:hover {
+    background-color: #1e40af;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+  
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .nav-link {
+      font-size: 1rem;
+    }
+  
+    .hero-title {
+      font-size: 3rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1.25rem;
+    }
+  
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      padding: 0 2rem;
+    }
+  }
+  .info-section {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  padding: 3rem 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.info-block h3 {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border-bottom: 2px solid #ffffff44;
+  padding-bottom: 0.5rem;
+}
+
+.info-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-block ul li {
+  margin: 0.4rem 0;
+}
+
+.info-block ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.info-block ul li a:hover {
+  color: #93c5fd;
+}
+
+.info-logo {
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.info-company {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.info-tagline {
+  font-size: 0.95rem;
+  color: #dbeafe;
+}
+
+.info-social a {
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 0.95rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-social a:hover {
+  color: #60a5fa;
+}
+
