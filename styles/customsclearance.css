@@ -131,7 +131,7 @@ body {
 /* ─── Hero Section ──────────────────────────────────────────────────────────── */
 
 .customs-hero {
-  background-image: url(images/customsclearance.jpg);
+  background-image: url(assets/customsclearance.jpg);
   min-height: 70vh;
   display: flex;
   align-items: center;
@@ -278,15 +278,15 @@ body {
 
 /* Background images for each type of service */
 .import-clearance {
-  background: url('images/importclearance.jpg') center/cover no-repeat;
+  background: url('assets/importclearance.jpg') center/cover no-repeat;
 }
 
 .export-documentation {
-  background: url('images/exportdocumentaion.jpg') center/cover no-repeat;
+  background: url('assets/exportdocumentaion.jpg') center/cover no-repeat;
 }
 
 .hs-code-classification {
-  background: url('images/hscodeclasification.jpg') center/cover no-repeat;
+  background: url('assets/hscodeclasification.jpg') center/cover no-repeat;
 }
 
 .service-card:hover {

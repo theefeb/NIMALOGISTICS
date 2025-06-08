@@ -91,7 +91,7 @@ body {
 
 /* Hero Section */
 .airfreight-hero {
-  background: url('images/airfreight.jpg') center/cover no-repeat;
+  background: url('assets/airfreight.jpg') center/cover no-repeat;
   min-height: 70vh;
   display: flex;
   align-items: center;
@@ -210,15 +210,15 @@ body {
 
 /* Service Cards with Individual Backgrounds */
 .express-shipping {
-  background: url('images/expressshipping.jpg') center/cover no-repeat;
+  background: url('assets/expressshipping.jpg') center/cover no-repeat;
 }
 
 .temperature-control {
-  background: url('images/temperaturecontrol.jpg') center/cover no-repeat;
+  background: url('assets/temperaturecontrol.jpg') center/cover no-repeat;
 }
 
 .heavy-cargo {
-  background: url('images/heavycargo.jpg') center/cover no-repeat;
+  background: url('assets/heavycargo.jpg') center/cover no-repeat;
 }
 .service-card:hover {
   transform: translateY(-5px);
