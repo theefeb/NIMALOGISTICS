@@ -92,7 +92,7 @@ body {
 /* Hero Section */
 .oceanfreight-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-              url('images/oceanfreight.jpg') center/cover no-repeat;
+              url('assets/oceanfreight.jpg') center/cover no-repeat;
   min-height: 70vh;
   display: flex;
   align-items: center;
@@ -195,15 +195,15 @@ body {
 }
 
 .fcl-shipping {
-  background: url('images/fclshipping.jpg') center/cover no-repeat;
+  background: url('assets/fclshipping.jpg') center/cover no-repeat;
 }
 
 .lcl-consolidation {
-  background: url('images/iclconsolidation.jpg') center/cover no-repeat;
+  background: url('assets/iclconsolidation.jpg') center/cover no-repeat;
 }
 
 .breakbulk {
-  background: url('images/breakbulk.jpg') center/cover no-repeat;
+  background: url('assets/breakbulk.jpg') center/cover no-repeat;
 }
 
 .service-card:hover {
