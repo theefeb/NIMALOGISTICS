@@ -136,7 +136,7 @@ body {
   
  /* Hero Section */
 .hero {
-  background-image: url('assets/hero.jpg');
+  background-image: url("../assets/hero.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -262,15 +262,15 @@ body {
 
 /* Individual card backgrounds */
 .air-freight {
-  background-image: url('assets/airfreight.jpg');
+  background-image: url('../assets/airfreight.jpg');
 }
 
 .ocean-freight {
-  background-image: url('assets/oceanfreight.jpg');
+  background-image: url('../assets/oceanfreight.jpg');
 }
 
 .customs-clearance {
-  background-image: url('assets/customsclearance.jpg');
+  background-image: url('../assets/customsclearance.jpg');
 }
 
 /* Overlay for all cards */
