@@ -460,6 +460,258 @@ body {
 }
 
 .info-social a:hover {
-  color: #60a5fa;
+    color: #60a5fa;
+
+
+//* ====================== */
+/* ENHANCED MOBILE STYLES  */
+/* ====================== */
+
+@media (max-width: 768px) {
+    /* Base Improvements */
+    html {
+        font-size: 16px;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    /* Header & Navigation */
+    .header {
+        padding: 0.8rem 1rem;
+        position: sticky;
+    }
+
+    .header-container {
+        padding: 0;
+    }
+
+    .logo {
+        height: 2.2rem;
+    }
+
+    .company-name {
+        font-size: 1.25rem;
+        white-space: nowrap;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #1e3a8a;
+        flex-direction: column;
+        padding: 0;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .main-nav.active {
+        transform: translateY(0);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .nav-link {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+    }
+
+    /* Improved hamburger button */
+    .nav-toggle {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 80vh;
+        min-height: 500px;
+        background-attachment: scroll;
+        background-position: center center;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+        padding: 0 1.5rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        padding: 0 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        min-width: 160px;
+    }
+
+    /* Service Cards */
+    .services {
+        padding: 3rem 1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        min-height: 200px;
+        margin: 0;
+        aspect-ratio: unset;
+    }
+
+    .service-content {
+        padding: 1.5rem;
+    }
+
+    .service-title {
+        font-size: 1.4rem;
+    }
+
+    .service-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Forms */
+    .tracking,
+    .booking,
+    .contact {
+        padding: 3rem 1rem;
+    }
+
+    .tracking-form,
+    .booking-form,
+    .contact-form {
+        padding: 0;
+    }
+
+    .form-input {
+        font-size: 1rem;
+        padding: 0.9rem 1rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Footer & Info Section */
+    .info-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .info-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .info-block {
+        margin-bottom: 0;
+    }
+
+    .info-block h3 {
+        font-size: 1.2rem;
+    }
+
+    .info-block ul li {
+        margin: 0.6rem 0;
+    }
+
+    .info-block ul li a {
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Mobile-specific enhancements */
+    input, textarea, button, select {
+        font-size: 1rem !important;
+    }
+
+    /* Prevent zoom on input focus */
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        select:focus,
+        textarea:focus,
+        input:focus {
+            font-size: 1rem !important;
+        }
+    }
+}
+
+/* ====================== */
+/* COMMON MOBILE FIXES    */
+/* ====================== */
+
+/* 1. Prevent long words from breaking layout */
+body {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* 2. Better tap targets for all interactive elements */
+a, button, input[type="submit"], input[type="button"] {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/* 3. Remove 300ms delay on tap */
+a, button, input, label, select {
+    touch-action: manipulation;
+}
+
+/* 4. Prevent iOS text size adjust */
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+/* 5. Remove default iOS button styling */
+input[type="submit"],
+input[type="button"],
+button {
+    -webkit-appearance: none;
+}
+
+/* 6. Better scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 7. Active state feedback */
+.btn-primary:active,
+.nav-link:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+}
+
+/* 8. Prevent image overflow */
+img {
+    max-width: 100%;
+    height: auto;
 }
 
