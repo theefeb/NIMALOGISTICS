@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Customs Clearance Services | NIMA LOGISTICS</title>
+  <meta name="keywords" content="customs clearance, import, export, documentation, compliance, logistics, NIMA LOGISTICS">
+  <meta property="og:title" content="Customs Clearance Services | NIMA LOGISTICS" />
+  <meta property="og:description" content="Streamlined import/export documentation and compliance for 120+ countries." />
+  <meta property="og:image" content="assets/customsclearance.jpg" />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -20,7 +25,7 @@
     <div class="container header-container">
       <div class="logo-container">
         <a href="/">
-          <img src="assets/nimalogo.jpg" alt="NIMA LOGISTICS Logo" class="logo" />
+          <img src="assets/nimalogo.jpg" alt="NIMA LOGISTICS company logo" class="logo" loading="lazy" />
         </a>
         <h1 class="company-name">NIMA LOGISTICS</h1>
       </div>
@@ -29,11 +34,11 @@
         <span class="hamburger"></span>
       </button>
 
-      <nav class="main-nav">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/services" class="nav-link">Services</a>
-        <a href="/customs-clearance" class="nav-link active" aria-current="page">Customs Clearance</a>
-        <a href="/contact" class="nav-link">Contact</a>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="home.html#services" class="nav-link">Services</a>
+        <a href="customsclearance.html" class="nav-link active" aria-current="page">Customs Clearance</a>
+        <a href="home.html#info" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
@@ -198,49 +203,18 @@
       <form class="quote-form" action="/quote" method="post">
         <div class="form-group">
           <label for="name" class="form-label">Your Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            class="form-input"
-            placeholder="Full Name"
-            required
-          />
+          <input type="text" id="name" class="form-input" aria-label="Your Name" autocomplete="name">
         </div>
         <div class="form-group">
-          <label for="email" class="form-label">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="form-input"
-            placeholder="you@example.com"
-            required
-          />
+          <label for="email" class="form-label">Your Email</label>
+          <input type="email" id="email" class="form-input" aria-label="Your Email" autocomplete="email">
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="origin-country" class="form-label">Origin Country</label>
-            <select id="origin-country" name="origin" class="form-input" required>
-              <option value="">Select country</option>
-              <option value="US">United States</option>
-              <option value="CN">China</option>
-              <option value="DE">Germany</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="goods-type" class="form-label">Type of Goods</label>
-            <select id="goods-type" name="goods" class="form-input" required>
-              <option value="">Select category</option>
-              <option value="electronics">Electronics</option>
-              <option value="textiles">Textiles</option>
-              <option value="machinery">Machinery</option>
-            </select>
-          </div>
+        <div class="form-group">
+          <label for="details" class="form-label">Details</label>
+          <textarea id="details" class="form-input" aria-label="Details" autocomplete="off"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">
-          Get Customs Advice
-        </button>
+        <button type="submit" class="btn btn-primary">Request Consultation</button>
+        <p class="form-note">* This form is for demonstration only. No real consultation will be scheduled.</p>
       </form>
     </div>
   </section>
@@ -252,17 +226,18 @@
         <div>
           <img
             src="assets/nimalogo.jpg"
-            alt="NIMA LOGISTICS Logo"
+            alt="NIMA LOGISTICS company logo"
             class="footer-logo"
+            loading="lazy"
           >
           <p>Your Global logistics solutions</p>
         </div>
         <div>
           <h3 class="footer-title">Services</h3>
           <div class="footer-links">
-            <a href="/air-freight">Air Freight</a>
-            <a href="/ocean-freight">Ocean Freight</a>
-            <a href="/customs-clearance" aria-current="page">Customs Clearance</a>
+            <a href="airfreight.html">Air Freight</a>
+            <a href="oceanfreight.html">Ocean Freight</a>
+            <a href="customsclearance.html">Customs Clearance</a>
           </div>
         </div>
         <div>

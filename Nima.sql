@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS nima_logistics;
+USE nima_logistics;
+
+CREATE TABLE IF NOT EXISTS bookings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    details TEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);

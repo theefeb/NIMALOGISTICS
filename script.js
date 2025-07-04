@@ -34,38 +34,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
-const navToggle = document.querySelector('.nav-toggle');
-const mainNav = document.querySelector('.main-nav');
-const header = document.querySelector('.header');
 
-navToggle.addEventListener('click', () => {
-  mainNav.classList.toggle('active');
-});
+    // Navigation toggle and sticky header
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    const header = document.querySelector('.header');
 
-// Add shadow when scrolling down
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 20) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
-// Mobile navigation toggle
-const navToggle = document.querySelector('.nav-toggle');
-const mainNav = document.querySelector('.main-nav');
+    if (navToggle && mainNav) {
+        navToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            document.body.classList.toggle('nav-open');
+        });
+    }
 
-navToggle.addEventListener('click', () => {
-  mainNav.classList.toggle('active');
-  document.body.classList.toggle('nav-open');
-});
-
-// Sticky header scroll effect
-const header = document.querySelector('.header');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 });
