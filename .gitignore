@@ -1,0 +1,96 @@
+# NIMA LOGISTICS - .gitignore
+
+# Development and IDE files
+.idea/
+.vscode/
+.qodo/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+error_log
+access_log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.staging
+
+# Database files (if any)
+*.sql
+*.db
+*.sqlite
+
+# Cache directories
+cache/
+tmp/
+temp/
+
+# Node modules (if using any frontend build tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Composer (keep vendor but ignore lock file if needed)
+# composer.lock
+
+# Backup files
+*.backup
+*.old
+*.orig
+
+# Test files (optional - uncomment if you want to exclude test files)
+# development/tests/
+# backend/tests/
+
+# Development backups (optional - uncomment if you want to exclude backup files)
+# development/backups/
+
+# PHP specific
+*.php~
+.phpunit.result.cache
+
+# Email logs and temporary files
+mail_logs/
+email_logs/
+*.eml
+
+# Configuration files with sensitive data (if any)
+config.local.php
+database.local.php
+
+# Upload directories (if any)
+uploads/
+user_uploads/
+
+# Session files
+sessions/
+*.sess
+
+# Compiled files
+*.compiled
+*.min.js
+*.min.css
+
+# Source maps
+*.map 

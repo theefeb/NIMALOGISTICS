@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NIMA LOGISTICS - LCL Consolidation & FCL Shipping Solutions">
+  <meta name="keywords" content="LCL consolidation, FCL shipping, container shipping, logistics, Kenya, NIMA LOGISTICS">
+  <meta property="og:title" content="NIMA LOGISTICS - LCL Consolidation & FCL" />
+  <meta property="og:description" content="Flexible container solutions - Less than Container Load (LCL) and Full Container Load (FCL) services." />
+  <meta property="og:image" content="assets/lclconsolidation.jpg" />
+  <meta property="og:type" content="website" />
+  <title>LCL Consolidation & FCL - NIMA LOGISTICS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css">
+  <style>
+    .lcl-hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/lclconsolidation.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+    
+    .container-feature {
+      background: #f8fafc;
+      padding: 2rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .container-feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-comparison {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    
+    .comparison-item {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+    }
+    
+    .comparison-item i {
+      margin-right: 1rem;
+      color: #fbbf24;
+      font-size: 1.5rem;
+    }
+    
+    .lcl-option {
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .lcl-option:hover {
+      border-color: #3b82f6;
+      transform: translateY(-5px);
+    }
+    
+    .fcl-option {
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .fcl-option:hover {
+      border-color: #10b981;
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo-container">
+        <a href="index.html" style="display: flex; align-items: center; gap: 1rem; text-decoration: none; color: inherit;">
+          <img src="assets/nimalogo.jpg" alt="NIMA LOGISTICS company logo" class="logo" loading="lazy" />
+          <h1 class="company-name">NIMA LOGISTICS</h1>
+        </a>
+      </div>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="index.html#info" class="nav-link">Info</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="lcl-hero">
+      <div class="container">
+        <div class="text-center">
+          <h1 class="text-5xl font-bold mb-6">LCL Consolidation & FCL</h1>
+          <p class="text-xl mb-8 max-w-3xl mx-auto">
+            Flexible container solutions - Less than Container Load (LCL) consolidation 
+            and Full Container Load (FCL) services tailored to your shipping needs.
+          </p>
+          <div class="flex justify-center gap-4 flex-wrap">
+            <a href="#services" class="btn-primary">Explore Services</a>
+            <a href="#contact" class="btn-secondary">Get Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="py-16 bg-white">
+      <div class="container">
+        <h2 class="section-title text-center mb-12">Container Shipping Solutions</h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <!-- LCL Option -->
+          <div class="lcl-option">
+            <div class="text-center mb-6">
+              <i class="fas fa-boxes text-5xl text-blue-600 mb-4"></i>
+              <h3 class="text-2xl font-bold mb-2">LCL Consolidation</h3>
+              <p class="text-gray-600">Less than Container Load</p>
+            </div>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                <div>
+                  <h4 class="font-semibold">Perfect for Small Shipments</h4>
+                  <p class="text-sm text-gray-600">Ideal when you don't need a full container</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                <div>
+                  <h4 class="font-semibold">Cost-Effective</h4>
+                  <p class="text-sm text-gray-600">Pay only for the space you use</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                <div>
+                  <h4 class="font-semibold">Flexible Scheduling</h4>
+                  <p class="text-sm text-gray-600">Regular departures with flexible booking</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                <div>
+                  <h4 class="font-semibold">Door-to-Door Service</h4>
+                  <p class="text-sm text-gray-600">Complete logistics solution</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 text-center">
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                Best for: 1-15 CBM shipments
+              </span>
+            </div>
+          </div>
+
+          <!-- FCL Option -->
+          <div class="fcl-option">
+            <div class="text-center mb-6">
+              <i class="fas fa-shipping-fast text-5xl text-green-600 mb-4"></i>
+              <h3 class="text-2xl font-bold mb-2">FCL Shipping</h3>
+              <p class="text-gray-600">Full Container Load</p>
+            </div>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                <div>
+                  <h4 class="font-semibold">Dedicated Container</h4>
+                  <p class="text-sm text-gray-600">Exclusive use of entire container</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                <div>
+                  <h4 class="font-semibold">Faster Transit</h4>
+                  <p class="text-sm text-gray-600">Direct routing without consolidation delays</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                <div>
+                  <h4 class="font-semibold">Better Security</h4>
+                  <p class="text-sm text-gray-600">Reduced handling and security risks</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                <div>
+                  <h4 class="font-semibold">Custom Loading</h4>
+                  <p class="text-sm text-gray-600">Optimize loading for your specific cargo</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 text-center">
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                Best for: 15+ CBM shipments
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Services -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Container Types -->
+          <div class="container-feature">
+            <div class="text-center mb-4">
+              <i class="fas fa-cube text-4xl text-blue-600 mb-4"></i>
+              <h3 class="text-xl font-semibold mb-3">Container Types</h3>
+            </div>
+            <p class="text-gray-600">
+              Standard 20ft and 40ft containers, high cube options, refrigerated containers, 
+              and specialized equipment for various cargo types.
+            </p>
+          </div>
+
+          <!-- Consolidation Services -->
+          <div class="container-feature">
+            <div class="text-center mb-4">
+              <i class="fas fa-layer-group text-4xl text-blue-600 mb-4"></i>
+              <h3 class="text-xl font-semibold mb-3">Consolidation Services</h3>
+            </div>
+            <p class="text-gray-600">
+              Professional consolidation of multiple shipments with proper packaging, 
+              labeling, and documentation handling.
+            </p>
+          </div>
+
+          <!-- Tracking & Monitoring -->
+          <div class="container-feature">
+            <div class="text-center mb-4">
+              <i class="fas fa-satellite text-4xl text-blue-600 mb-4"></i>
+              <h3 class="text-xl font-semibold mb-3">Tracking & Monitoring</h3>
+            </div>
+            <p class="text-gray-600">
+              Real-time tracking of your shipments with regular status updates and 
+              delivery notifications.
+            </p>
+          </div>
+
+          <!-- Customs Clearance -->
+          <div class="container-feature">
+            <div class="text-center mb-4">
+              <i class="fas fa-file-contract text-4xl text-blue-600 mb-4"></i>
+              <h3 class="text-xl font-semibold mb-3">Customs Clearance</h3>
+            </div>
+            <p class="text-gray-600">
+              Complete customs documentation and clearance services for smooth 
+              border transitions.
+            </p>
+          </div>
+
+          <!-- Insurance Coverage -->
+          <div class="container-feature">
+            <div class="text-center mb-4">
+              <i class="fas fa-shield-alt text-4xl text-blue-600 mb-4"></i>
+              <h3 class="text-xl font-semibold mb-3">Insurance Coverage</h3>
+            </div>
+            <p class="text-gray-600">
+              Comprehensive cargo insurance options to protect your shipments 
+              during transit.
+            </p>
+          </div>
+
+          <!-- Door-to-Door -->
+          <div class="container-feature">
+            <div class="text-center mb-4">
+              <i class="fas fa-home text-4xl text-blue-600 mb-4"></i>
+              <h3 class="text-xl font-semibold mb-3">Door-to-Door Service</h3>
+            </div>
+            <p class="text-gray-600">
+              Complete logistics solution from pickup to final delivery with 
+              local transportation included.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Comparison -->
+    <section class="py-16 bg-gray-50">
+      <div class="container">
+        <h2 class="section-title text-center mb-12">LCL vs FCL Comparison</h2>
+        
+        <div class="service-comparison">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 class="text-2xl font-semibold mb-6">LCL Advantages</h3>
+              <div class="space-y-4">
+                <div class="comparison-item">
+                  <i class="fas fa-dollar-sign"></i>
+                  <div>
+                    <h4 class="font-semibold">Lower Initial Cost</h4>
+                    <p class="text-sm opacity-90">No need to fill entire container</p>
+                  </div>
+                </div>
+                <div class="comparison-item">
+                  <i class="fas fa-calendar"></i>
+                  <div>
+                    <h4 class="font-semibold">Flexible Scheduling</h4>
+                    <p class="text-sm opacity-90">Regular departures available</p>
+                  </div>
+                </div>
+                <div class="comparison-item">
+                  <i class="fas fa-boxes"></i>
+                  <div>
+                    <h4 class="font-semibold">Small Shipment Friendly</h4>
+                    <p class="text-sm opacity-90">Perfect for growing businesses</p>
+                  </div>
+                </div>
+                <div class="comparison-item">
+                  <i class="fas fa-chart-line"></i>
+                  <div>
+                    <h4 class="font-semibold">Scalable Solution</h4>
+                    <p class="text-sm opacity-90">Easy to increase volume over time</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 class="text-2xl font-semibold mb-6">FCL Advantages</h3>
+              <div class="space-y-4">
+                <div class="comparison-item">
+                  <i class="fas fa-rocket"></i>
+                  <div>
+                    <h4 class="font-semibold">Faster Transit</h4>
+                    <p class="text-sm opacity-90">Direct routing without delays</p>
+                  </div>
+                </div>
+                <div class="comparison-item">
+                  <i class="fas fa-shield-alt"></i>
+                  <div>
+                    <h4 class="font-semibold">Better Security</h4>
+                    <p class="text-sm opacity-90">Reduced handling risks</p>
+                  </div>
+                </div>
+                <div class="comparison-item">
+                  <i class="fas fa-cogs"></i>
+                  <div>
+                    <h4 class="font-semibold">Custom Loading</h4>
+                    <p class="text-sm opacity-90">Optimize for your cargo</p>
+                  </div>
+                </div>
+                <div class="comparison-item">
+                  <i class="fas fa-percentage"></i>
+                  <div>
+                    <h4 class="font-semibold">Cost Per Unit</h4>
+                    <p class="text-sm opacity-90">Lower cost for large volumes</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 NIMA LOGISTICS. All rights reserved.</p>
+    <p class="credit"><a href="#" tabindex="0">made by Mcave</a></p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+  <script src="script.js"></script>
+</body>
+</html> 

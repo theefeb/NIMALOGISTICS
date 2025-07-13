@@ -1,202 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="NIMA LOGISTICS - Fast & Reliable Air and Sea Freight Solutions">
-  <meta name="keywords" content="logistics, air freight, ocean freight, customs clearance, shipping, cargo, Kenya, global logistics, NIMA LOGISTICS">
-  <meta property="og:title" content="NIMA LOGISTICS - Fast & Reliable Air and Sea Freight Solutions" />
-  <meta property="og:description" content="Connecting continents through air and sea freight with trust and efficiency." />
-  <meta property="og:image" content="assets/nimalogo.jpg" />
-  <meta property="og:type" content="website" />
-  <title>NIMA LOGISTICS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="styles/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="2; url=pages/index.html">
+    <title>NIMA LOGISTICS - Welcome</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            display: block;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 2rem;
+        }
+        .link {
+            color: #e0e7ff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
+            border: 2px solid #e0e7ff;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        .link:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container header-container">
-      <div class="logo-container">
-        <img src="assets/nimalogo.jpg" alt="NIMA LOGISTICS company logo" class="logo" loading="lazy" />
-        <h1 class="company-name">NIMA LOGISTICS</h1>
-      </div>
-  
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-  
-      <nav class="main-nav" aria-label="Main Navigation">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="blog.html" class="nav-link">Blog</a>
-        <a href="#tracking" class="nav-link">Tracking</a>
-        <a href="#booking" class="nav-link">Booking</a>
-        <a href="#info" class="nav-link">Info</a>
-
-      </nav>
-    </div>
-  </header>
-  
-
-  <!-- Hero Section -->
-  <main>
-  <section id="home" class="hero">
-    <div class="hero-overlay">
-      <div class="container">
-        <h2 class="hero-title">Fast & Reliable Logistics Solutions</h2>
-        <p class="hero-subtitle">Connecting continents through air and sea freight with trust and efficiency.</p>
-        <a href="#services" class="btn-primary">Explore Services</a>
-      </div>
-    </div>
-  </section>
-</main>
-
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <div class="services-grid">
-      <!-- Air Freight Card -->
-      <div class="service-card air-freight">
-        <div class="service-content">
-          <h4 class="service-title">Air Freight</h4>
-          <p class="service-description">Fast and secure air cargo delivery worldwide.</p>
-          <a href="airfreight.html" class="btn-primary service-btn">See more</a>
-        </div>
-      </div>
-
-      <!-- Ocean Freight Card -->
-      <div class="service-card ocean-freight">
-        <div class="service-content">
-          <h4 class="service-title">Ocean Freight</h4>
-          <p class="service-description">Reliable shipping services for bulk and container goods.</p>
-          <a href="oceanfreight.html" class="btn-primary service-btn">See more</a>
-        </div>
-      </div>
-
-      <!-- Customs Clearance Card -->
-      <div class="service-card customs-clearance">
-        <div class="service-content">
-          <h4 class="service-title">Customs Clearance</h4>
-          <p class="service-description">Expert handling of cross-border and international logistics.</p>
-          <a href="customsclearance.html" class="btn-primary service-btn">See more</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Tracking Section -->
-  <section id="tracking" class="tracking">
     <div class="container">
-      <h3 class="section-title">Track Your Shipment</h3>
-      <form class="tracking-form">
-        <label>
-          <input type="text" placeholder="Enter Tracking Number" class="form-input" required aria-label="Tracking Number" autocomplete="off">
-        </label>
-        <button type="submit" class="btn-primary">Track</button>
-        <p class="form-note">* Real tracking integration coming soon.</p>
-      </form>
+        <div class="logo">
+            <img src="assets/nimalogo.jpg" alt="NIMA LOGISTICS" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+        </div>
+        <h1>NIMA LOGISTICS</h1>
+        <p>Welcome to our logistics solutions website</p>
+        <div class="spinner"></div>
+        <p>
+            <a href="pages/index.html" class="link">Enter Website</a>
+        </p>
+        <p style="font-size: 0.9rem; opacity: 0.7;">
+            You will be redirected automatically in 2 seconds...
+        </p>
     </div>
-  </section>
-
-  <!-- Booking Section -->
-  <section id="booking" class="booking">
-    <div class="container">
-      <h3 class="section-title">Book a Shipment</h3>
-      <form class="booking-form" action="submit_booking.php" method="POST">
-        <label>
-          <input type="text" name="name" placeholder="Full Name" class="form-input" required aria-label="Full Name" autocomplete="name">
-        </label>
-        <label>
-          <input type="email" name="email" placeholder="Email Address" class="form-input" required aria-label="Email Address" autocomplete="email">
-        </label>
-        <label>
-          <input type="text" name="details" placeholder="Shipment Details" class="form-input" required aria-label="Shipment Details" autocomplete="off">
-        </label>
-        <button type="submit" class="btn-primary">Book Now</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-<section class="faq" style="padding:3em 0; background:#f8fafc;">
-  <div class="container">
-    <h2 class="section-title">Frequently Asked Questions</h2>
-    <div class="faq-list">
-      <div class="faq-item"><strong>How do I track my shipment?</strong><br>Use the tracking form above or contact our support team for updates.</div>
-      <div class="faq-item"><strong>What documents are required for customs clearance?</strong><br>Commercial invoice, packing list, and other documents as advised by our team.</div>
-      <div class="faq-item"><strong>How fast is air freight delivery?</strong><br>Typically 24-72 hours to major destinations.</div>
-      <div class="faq-item"><strong>Can I get a quote online?</strong><br>Yes, use our booking form or contact us for a custom quote.</div>
-    </div>
-  </div>
-</section>
-
-  <!-- Info Section (replaces Contact Us section) -->
-<section id="info" class="info-section">
-  <div class="info-container">
-  
-
-    <!-- Quick Nav -->
-    <div class="info-block">
-      <h3 class="info-heading">Quick Nav</h3>
-      <ul>
-        <li><a href="customsclearance.html">Customs Brokerage</a></li>
-        <li><a href="oceanfreight.html">Freight Coordination</a></li>
-        <li><a href="airfreight.html">Air Charter</a></li>
-        <li><a href="#">Storage</a></li>
-        <li><a href="#">Project Cargo</a></li>
-        <li><a href="#">Moving Abroad</a></li>
-        <li><a href="#">Pet Relocation</a></li>
-        <li><a href="#">Packing Solutions</a></li>
-      </ul>
-    </div>
-
-    <!-- Information -->
-    <div class="info-block">
-      <h3 class="info-heading">Information</h3>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Resources</a></li>
-        <li><a href="#">News & Events</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Our Portfolio</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Us -->
-    <div class="info-block">
-      <h3 class="info-heading">Contact Us</h3>
-      <p>+254 00000000</p>
-      <p>+254 00000000</p>
-      <p>info@nima.co.ke</p>
-      <div class="info-social">
-        <a href="#">Facebook</a>
-        <a href="#">LinkedIn</a>
-      </div>
-      <form class="contact-form" action="submit_contact.php" method="POST" style="margin-top:1em;">
-        <label>
-          <input type="text" name="name" placeholder="Your Name" class="form-input" required aria-label="Your Name" autocomplete="name">
-        </label>
-        <label>
-          <input type="email" name="email" placeholder="Your Email" class="form-input" required aria-label="Your Email" autocomplete="email">
-        </label>
-        <label>
-          <textarea name="message" placeholder="Your Message" class="form-input" required aria-label="Your Message"></textarea>
-        </label>
-        <button type="submit" class="btn-primary">Send Message</button>
-      </form>
-    </div>
-
-  </div>
-</section>
-
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 NIMA LOGISTICS. All rights reserved.</p> <p>made by Mcave</p>
-    
-  </footer>
-  <script src="script.js"></script>
 </body>
-</html>
+</html> 

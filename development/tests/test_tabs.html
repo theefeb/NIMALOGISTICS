@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Test</title>
+    <style>
+        .tab-navigation {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tab-btn {
+            padding: 1rem 2rem;
+            background: #e5e7eb;
+            color: #374151;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .tab-btn.active {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .tab-panel {
+            display: none;
+            padding: 2rem;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tab Test</h1>
+    
+    <div class="tab-navigation">
+        <button class="tab-btn active" data-tab="process">How We Work</button>
+        <button class="tab-btn" data-tab="trust">Why Choose Us</button>
+        <button class="tab-btn" data-tab="problems">Problems We Solve</button>
+        <button class="tab-btn" data-tab="solutions">Our Solutions</button>
+    </div>
+
+    <div class="tab-content">
+        <div id="process" class="tab-panel active">
+            <h2>Process Content</h2>
+            <p>This is the process tab content.</p>
+        </div>
+        
+        <div id="trust" class="tab-panel">
+            <h2>Trust Content</h2>
+            <p>This is the trust tab content.</p>
+        </div>
+        
+        <div id="problems" class="tab-panel">
+            <h2>Problems Content</h2>
+            <p>This is the problems tab content.</p>
+        </div>
+        
+        <div id="solutions" class="tab-panel">
+            <h2>Solutions Content</h2>
+            <p>This is the solutions tab content.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing tabs...');
+            
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+            
+            console.log('Found tab buttons:', tabButtons.length);
+            console.log('Found tab panels:', tabPanels.length);
+
+            tabButtons.forEach((button, index) => {
+                console.log(`Adding click listener to button ${index}:`, button.textContent);
+                button.addEventListener('click', function() {
+                    console.log('Tab button clicked:', this.textContent);
+                    const targetTab = this.getAttribute('data-tab');
+                    console.log('Target tab:', targetTab);
+                    
+                    // Remove active class from all buttons and panels
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    tabPanels.forEach(panel => {
+                        panel.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked button and show target panel
+                    this.classList.add('active');
+                    
+                    const targetPanel = document.getElementById(targetTab);
+                    console.log('Target panel found:', targetPanel);
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                    } else {
+                        console.error('Target panel not found for:', targetTab);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
