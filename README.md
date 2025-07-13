@@ -36,7 +36,7 @@ nima-logistics/
 │   ├── faq.html                       # Frequently asked questions
 │   ├── privacy.html                   # Privacy policy
 │   ├── blog.html                      # Company blog
-│   ├── redirect.html                  # Redirect page
+
 │   └── 📁 services/                   # Service pages
 │       ├── airfreight.html
 │       ├── oceanfreight.html
