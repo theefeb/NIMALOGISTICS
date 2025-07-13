@@ -8,7 +8,7 @@ A comprehensive logistics website showcasing NIMA LOGISTICS's complete range of 
 - **Service Pages** - Detailed information for each logistics service
 - **Contact Forms** - Integrated contact and quote request forms
 - **Admin Panel** - Backend administration for managing contacts and bookings
-- **Email Integration** - PHPMailer integration for automated email responses
+- **Email Integration** - PHP mail() function for automated email responses
 - **Modern UI/UX** - Clean, professional design with smooth animations
 
 ## 🚀 Services Offered
@@ -50,8 +50,6 @@ nima-logistics/
 ├── 📁 scripts/                        # JavaScript files
 │   └── script.js                      # Main JavaScript functionality
 ├── 📁 backend/                        # PHP backend files
-│   ├── 📁 config/                     # Configuration files
-│   │   └── email_config.php           # Email configuration
 │   ├── 📁 handlers/                   # Form handlers
 │   │   ├── submit_contact.php         # Contact form handler
 │   │   ├── submit_contact_smtp.php    # SMTP contact handler
@@ -64,7 +62,6 @@ nima-logistics/
 │   │   └── view_contacts.php          # View contacts
 │   ├── 📁 tests/                      # Test files
 │   │   ├── test_email_send.php        # Email testing
-│   │   ├── test_phpmailer.php         # PHPMailer testing
 │   │   └── check_logs.php             # Log checking
 │   └── 📁 database/                   # Database files
 │       └── Nima.sql                   # Database schema
@@ -103,9 +100,6 @@ nima-logistics/
 │   ├── airfreight.css                 # Air freight page styles
 │   ├── oceanfreight.css               # Ocean freight page styles
 │   └── customsclearance.css           # Customs clearance page styles
-├── 📁 vendor/                         # Composer dependencies
-│   └── phpmailer/                     # PHPMailer library
-├── 📁 phpmailer/                      # PHPMailer source
 ├── composer.json                      # Composer configuration
 ├── composer.lock                      # Composer lock file
 ├── .gitignore                         # Git ignore rules
@@ -123,7 +117,7 @@ nima-logistics/
 
 ### Backend
 - **PHP** - Server-side scripting
-- **PHPMailer** - Email functionality
+- **PHP mail()** - Email functionality
 - **MySQL** - Database (schema provided)
 
 ### Development Tools
@@ -136,7 +130,6 @@ nima-logistics/
 - Web server (Apache/Nginx)
 - PHP 7.4 or higher
 - MySQL database (optional for admin features)
-- Composer (for dependencies)
 
 ### Installation
 
@@ -146,20 +139,16 @@ nima-logistics/
    cd nima-logistics
    ```
 
-2. **Install dependencies**
-   ```bash
-   composer install
-   ```
+2. **Configure email settings**
+   - Update recipient email in `backend/handlers/submit_contact.php`
+   - Update recipient email in `backend/handlers/submit_contact_smtp.php`
+   - Configure server mail settings if needed
 
-3. **Configure email settings**
-   - Edit `backend/config/email_config.php`
-   - Update SMTP settings for contact forms
-
-4. **Set up database (optional)**
+3. **Set up database (optional)**
    - Import `backend/database/Nima.sql` to your MySQL database
    - Configure database connection in admin files
 
-5. **Configure web server**
+4. **Configure web server**
    - Point document root to project directory
    - Ensure PHP is enabled
    - Set up URL rewriting if needed
@@ -176,7 +165,7 @@ The website includes several contact forms:
 - **Quote Request Forms** - Service-specific quotes
 - **Admin Contact Management** - Backend contact viewing
 
-All forms use PHPMailer for reliable email delivery.
+All forms use PHP mail() function for email delivery.
 
 ## 🎨 Customization
 

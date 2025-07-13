@@ -43,52 +43,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     $conn->close();
     
-    // Test email configuration
-    echo "<h3>Email Configuration Test</h3>";
-    if (file_exists('email_config.php')) {
-        echo "<p style='color: green;'>✅ Email configuration file found</p>";
-        require_once 'email_config.php';
-        
-        echo "<p><strong>SMTP Host:</strong> " . SMTP_HOST . "</p>";
-        echo "<p><strong>SMTP Port:</strong> " . SMTP_PORT . "</p>";
-        echo "<p><strong>From Email:</strong> " . SMTP_FROM_EMAIL . "</p>";
-        echo "<p><strong>To Email:</strong> " . RECIPIENT_EMAIL . "</p>";
-        
-        // Test PHPMailer
-        if (file_exists('vendor/autoload.php')) {
-            echo "<p style='color: green;'>✅ PHPMailer found</p>";
-            
-            require 'vendor/autoload.php';
-            // PHPMailer classes are now available through autoloader
-            
-            try {
-                $mail = new PHPMailer(true);
-                $mail->isSMTP();
-                $mail->Host = SMTP_HOST;
-                $mail->SMTPAuth = true;
-                $mail->Username = SMTP_USERNAME;
-                $mail->Password = SMTP_PASSWORD;
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-                $mail->Port = SMTP_PORT;
-                
-                $mail->setFrom(SMTP_FROM_EMAIL, SMTP_FROM_NAME);
-                $mail->addAddress(RECIPIENT_EMAIL, RECIPIENT_NAME);
-                $mail->addReplyTo($email, $name);
-                
-                $mail->isHTML(true);
-                $mail->Subject = 'Debug Test - Contact Form';
-                $mail->Body = "This is a debug test email from the contact form.";
-                
-                $mail->send();
-                echo "<p style='color: green;'>✅ Test email sent successfully!</p>";
-            } catch (Exception $e) {
-                echo "<p style='color: red;'>❌ Email sending failed: " . $mail->ErrorInfo . "</p>";
-            }
-        } else {
-            echo "<p style='color: red;'>❌ PHPMailer not found</p>";
-        }
+    // Test email functionality
+    echo "<h3>Email Functionality Test</h3>";
+    
+    $to = "info@nimalogistics.com"; // Replace with your email
+    $subject = "Debug Test - Contact Form";
+    
+    // Email headers
+    $headers = array();
+    $headers[] = "MIME-Version: 1.0";
+    $headers[] = "Content-Type: text/html; charset=UTF-8";
+    $headers[] = "From: NIMA Logistics Website <noreply@nimalogistics.com>";
+    $headers[] = "Reply-To: {$email}";
+    $headers[] = "X-Mailer: PHP/" . phpversion();
+    
+    // Email body
+    $email_body = "
+        <html>
+        <head>
+            <title>Debug Test Email</title>
+        </head>
+        <body>
+            <h2>Debug Test Email</h2>
+            <p>This is a test email from the contact form debug script.</p>
+            <p><strong>Test Data:</strong></p>
+            <p>Name: " . htmlspecialchars($name) . "</p>
+            <p>Email: " . htmlspecialchars($email) . "</p>
+            <p>Message: " . htmlspecialchars($message) . "</p>
+        </body>
+        </html>
+    ";
+    
+    // Test PHP mail() function
+    $email_sent = mail($to, $subject, $email_body, implode("\r\n", $headers));
+    
+    if ($email_sent) {
+        echo "<p style='color: green;'>✅ Test email sent successfully using PHP mail()!</p>";
     } else {
-        echo "<p style='color: red;'>❌ Email configuration file not found</p>";
+        echo "<p style='color: red;'>❌ Email sending failed using PHP mail()</p>";
+        echo "<p><small>Note: PHP mail() function may not work on all servers. For production, consider using a proper SMTP service.</small></p>";
     }
     
 } else {
@@ -98,6 +91,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 echo "<h3>Quick Links</h3>";
-echo "<p><a href='index.html' style='background: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;'>← Back to Website</a></p>";
-echo "<p><a href='test_email_send.php' style='background: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;'>🧪 Send Test Email</a></p>";
+echo "<p><a href='../../pages/index.html' style='background: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;'>← Back to Website</a></p>";
+echo "<p><a href='../tests/test_email_send.php' style='background: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;'>🧪 Send Test Email</a></p>";
 ?> 

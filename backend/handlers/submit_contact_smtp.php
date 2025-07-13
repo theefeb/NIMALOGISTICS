@@ -3,12 +3,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Include Composer autoloader for PHPMailer
-require 'vendor/autoload.php';
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+// Simple contact form handler using PHP mail() function
+// No external dependencies required
 
 // Log the form submission
 error_log("Contact form submitted at: " . date('Y-m-d H:i:s'));
@@ -39,65 +35,45 @@ if ($name && $email && $message) {
     
     error_log("Database save result: " . ($db_success ? "SUCCESS" : "FAILED"));
     
-    // Include email configuration
-    require_once 'email_config.php';
+    // Email notification using PHP mail() function
+    $to = "info@nimalogistics.com"; // Replace with your email
+    $subject = "New Contact Message from " . $name;
     
-    // Email notification using PHPMailer with SMTP
-    $mail = new PHPMailer(true);
+    // Email headers
+    $headers = array();
+    $headers[] = "MIME-Version: 1.0";
+    $headers[] = "Content-Type: text/html; charset=UTF-8";
+    $headers[] = "From: NIMA Logistics Website <noreply@nimalogistics.com>";
+    $headers[] = "Reply-To: {$email}";
+    $headers[] = "X-Mailer: PHP/" . phpversion();
     
-    try {
-        error_log("Starting email sending process...");
-        
-        // Server settings for Gmail SMTP
-        $mail->isSMTP();
-        $mail->Host       = SMTP_HOST;
-        $mail->SMTPAuth   = true;
-        $mail->Username   = SMTP_USERNAME;
-        $mail->Password   = SMTP_PASSWORD;
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = SMTP_PORT;
-        
-        // Enable debug output
-        $mail->SMTPDebug = 0; // Set to 2 for detailed debug output
-        
-        // Recipients - The sender is the person filling out the form
-        $mail->setFrom(SMTP_USERNAME, 'NIMA Logistics Website');  // Use your Gmail as the sending account
-        $mail->addAddress(RECIPIENT_EMAIL, RECIPIENT_NAME);  // Send to your email
-        
-        // Set reply-to to the visitor's email so you can reply directly
-        $mail->addReplyTo($email, $name);
-        
-        // Content
-        $mail->isHTML(true);
-        $mail->Subject = 'New Contact Message from ' . $name;
-        $mail->Body    = "
+    // Email body
+    $email_body = "
+        <html>
+        <head>
+            <title>New Contact Form Submission</title>
+        </head>
+        <body>
             <h2>New Contact Form Submission</h2>
-            <p><strong>From:</strong> {$name} ({$email})</p>
+            <p><strong>From:</strong> " . htmlspecialchars($name) . " (" . htmlspecialchars($email) . ")</p>
             <p><strong>Message:</strong></p>
             <p>" . nl2br(htmlspecialchars($message)) . "</p>
             <hr>
             <p><small>This message was sent from the NIMA Logistics contact form.</small></p>
-            <p><small>Click 'Reply' to respond directly to {$name}.</small></p>
-        ";
-        $mail->AltBody = "
-            New Contact Form Submission
-            
-            From: {$name} ({$email})
-            Message: {$message}
-            
-            This message was sent from the NIMA Logistics contact form.
-            Reply to this email to respond to {$name}.
-        ";
-        
-        error_log("Attempting to send email...");
-        $mail->send();
-        $email_sent = true;
+            <p><small>Click 'Reply' to respond directly to " . htmlspecialchars($name) . ".</small></p>
+        </body>
+        </html>
+    ";
+    
+    error_log("Attempting to send email...");
+    
+    // Send email
+    $email_sent = mail($to, $subject, $email_body, implode("\r\n", $headers));
+    
+    if ($email_sent) {
         error_log("Email sent successfully!");
-        
-    } catch (Exception $e) {
-        $email_sent = false;
-        $error_message = "PHPMailer Error: {$mail->ErrorInfo}";
-        error_log($error_message);
+    } else {
+        error_log("Email sending failed!");
     }
     
     if ($db_success) {
