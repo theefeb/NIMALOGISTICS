@@ -2738,7 +2738,10 @@ a:focus, button:focus, .btn-primary:focus, .service-btn:focus {
 
 /* Simple fix for service card background images on mobile */
 @media (max-width: 768px) {
-  .service-card[style*="background-image"] {
+  .service-card[style*="background-image"],
+  .service-card.air-freight,
+  .service-card.ocean-freight,
+  .service-card.customs-clearance {
     background-attachment: scroll !important;
     background-position: center !important;
     background-size: cover !important;
