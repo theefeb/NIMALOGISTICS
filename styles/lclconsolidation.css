@@ -5,7 +5,7 @@
 
 /* LCL Consolidation Specific Styles */
 .lcl-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../../assets/lclconsolidation.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/lclconsolidation.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
