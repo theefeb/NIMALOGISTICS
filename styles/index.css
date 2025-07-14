@@ -1791,32 +1791,6 @@ a:focus, button:focus, .btn-primary:focus, .service-btn:focus {
     align-items: center !important;
     justify-content: center !important;
   }
-  .hamburger {
-    position: relative !important;
-    width: 28px !important;
-    height: 3px !important;
-    background: white !important;
-    display: block !important;
-    border-radius: 2px !important;
-    transition: all 0.3s ease !important;
-  }
-  .hamburger::before,
-  .hamburger::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 28px;
-    height: 3px;
-    background: white;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-  .hamburger::before {
-    top: -8px;
-  }
-  .hamburger::after {
-    top: 8px;
-  }
 }
 
 @media (max-width: 768px) {

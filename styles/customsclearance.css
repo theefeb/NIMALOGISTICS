@@ -101,33 +101,6 @@ body {
   cursor: pointer;
 }
 
-.nav-toggle .hamburger {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  display: block;
-  position: relative;
-}
-
-.nav-toggle .hamburger::before,
-.nav-toggle .hamburger::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  left: 0;
-  transition: all 0.3s ease;
-}
-
-.nav-toggle .hamburger::before {
-  top: -8px;
-}
-
-.nav-toggle .hamburger::after {
-  top: 8px;
-}
-
 /* ─── Hero Section ──────────────────────────────────────────────────────────── */
 
 .customs-hero {

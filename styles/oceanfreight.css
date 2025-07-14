@@ -91,8 +91,6 @@ body {
 
 /* Hero Section */
 .oceanfreight-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-              url('../assets/oceanfreight.jpg') center/cover no-repeat;
   min-height: 70vh;
   display: flex;
   align-items: center;

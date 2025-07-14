@@ -91,7 +91,6 @@ body {
 
 /* Hero Section */
 .airfreight-hero {
-  background: url('../assets/airfreight.jpg') center/cover no-repeat;
   min-height: 70vh;
   display: flex;
   align-items: center;
