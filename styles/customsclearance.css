@@ -131,7 +131,6 @@ body {
 /* ─── Hero Section ──────────────────────────────────────────────────────────── */
 
 .customs-hero {
-  background-image: url(../assets/customsclearance.jpg);
   min-height: 70vh;
   display: flex;
   align-items: center;
@@ -844,6 +843,7 @@ input, select, textarea {
 
 /* Improve form input visibility */
 .form-input {
+  appearance: none;
   -webkit-appearance: none;
   border-radius: 8px;
 }

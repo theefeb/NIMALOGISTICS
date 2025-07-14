@@ -2853,3 +2853,11 @@ a[href^="mailto:"]:focus {
     background-color: rgba(59, 130, 246, 0.1);
   }
 }
+
+.service-hero-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
