@@ -2049,3 +2049,53 @@ a[href^="mailto:"]:focus {
     justify-content: center;
   }
 }
+
+@media (max-width: 768px) {
+  .info-section {
+    padding: 2.5rem 0 2.5rem 0;
+    background: var(--primary);
+    color: #fff;
+  }
+  .info-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 0.5rem;
+  }
+  .info-block {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 2rem;
+    padding: 1.7rem 1.2rem;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  .info-block h3 {
+    font-size: 1.15rem;
+    margin-bottom: 1.1rem;
+  }
+  .info-block ul li {
+    margin-bottom: 0.7rem;
+  }
+  .info-block ul li a {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .info-social {
+    margin-top: 1.2rem;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stack contact form and map vertically instead of side-by-side */
+  .contact-map-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+  .contact-map-grid > div {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
