@@ -1897,8 +1897,12 @@ a[href^="mailto:"]:focus {
     width: 44px;
     height: 44px;
     padding: 0;
-    margin-left: auto;
-    transition: background 0.2s, box-shadow 0.2s;
+    margin: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    z-index: 1202;
+    /* Remove all margin-top, margin-right, margin-left overrides */
   }
   .nav-toggle:active, .nav-toggle:focus {
     background: rgba(59,130,246,0.18);
@@ -1996,10 +2000,14 @@ a[href^="mailto:"]:focus {
 
 @media (max-width: 768px) {
   .header {
-    z-index: 1201;
-    background: var(--primary);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1201;
+  }
+  body {
+    padding-top: 70px;
   }
   .nav-toggle {
     z-index: 1202;
@@ -2011,5 +2019,33 @@ a[href^="mailto:"]:focus {
   }
   .main-nav .nav-link {
     color: #fff !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Info section: stack and add breathing room */
+  .info-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  .info-block {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 1.5rem;
+    padding: 1.2rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  /* Hamburger: better spacing and centering */
+  .nav-toggle {
+    margin-top: 0.4rem;
+    margin-right: 0.4rem;
+    padding: 0.4em 0.7em;
+    height: 44px;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
