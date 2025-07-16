@@ -24,7 +24,7 @@ if ($name && $email && $message) {
     $stmt->close();
     
     // Email notification using PHP mail() function
-    $to = "info@nimalogistics.com"; // Replace with your email
+    $to = "febianfebb069@gmail.com"; // Testing email address
     $subject = "New Contact Message from NIMA Logistics Website";
     
     // Email headers

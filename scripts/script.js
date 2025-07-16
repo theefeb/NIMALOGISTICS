@@ -1,6 +1,5 @@
 // Form handling
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, initializing scripts...');
     
     // Highlight active nav link
     const navLinks = document.querySelectorAll('.nav-link');
@@ -15,17 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Tab functionality
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabPanels = document.querySelectorAll('.tab-panel');
-    
-    console.log('Found tab buttons:', tabButtons.length);
-    console.log('Found tab panels:', tabPanels.length);
 
     tabButtons.forEach((button, index) => {
-        console.log(`Adding click listener to button ${index}:`, button.textContent);
         button.addEventListener('click', function() {
-            console.log('Tab button clicked:', this.textContent);
             const targetTab = this.getAttribute('data-tab');
-            console.log('Target tab:', targetTab);
-            
             // Remove active class from all buttons and panels
             tabButtons.forEach(btn => {
                 btn.classList.remove('active');
@@ -35,18 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
             tabPanels.forEach(panel => {
                 panel.classList.remove('active');
             });
-            
             // Add active class to clicked button and show target panel
             this.classList.add('active');
             this.style.background = '#3b82f6';
             this.style.color = 'white';
-            
             const targetPanel = document.getElementById(targetTab);
-            console.log('Target panel found:', targetPanel);
             if (targetPanel) {
                 targetPanel.classList.add('active');
-            } else {
-                console.error('Target panel not found for:', targetTab);
             }
         });
     });
@@ -75,6 +62,39 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // EmailJS Contact Form Integration
+
+    // EmailJS contact form handler
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = `<span class="loading-spinner"></span> Sending...`;
+        submitBtn.disabled = true;
+
+        const params = {
+          name: document.getElementById('name').value,
+          email: document.getElementById('email').value,
+          subject: 'Contact Form',
+          message: document.getElementById('message').value,
+        };
+
+        emailjs.send('service_2m20d84', 'template_gnjktm4', params)
+          .then(function(response) {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            alert('Message sent! We will contact you shortly.');
+            contactForm.reset();
+          }, function(error) {
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            alert('Failed to send message. Please try again later.');
+          });
+      });
+    }
 
     // Navigation toggle and sticky header
 const navToggle = document.querySelector('.nav-toggle');

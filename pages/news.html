@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News & Events | NIMA LOGISTICS</title>
+  <meta name="description" content="Latest news, company updates, and upcoming events from NIMA LOGISTICS.">
+  <meta property="og:title" content="News & Events | NIMA LOGISTICS" />
+  <meta property="og:description" content="Stay updated with the latest news and events from NIMA LOGISTICS." />
+  <meta property="og:image" content="../assets/nimalogo.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="stylesheet" href="../styles/news.css">
+  <link rel="icon" href="../assets/nimalogo.jpg" type="image/jpeg">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo-container">
+        <a href="index.html" style="display: flex; align-items: center; gap: 1rem; text-decoration: none; color: inherit;">
+          <img src="../assets/nimalogo.jpg" alt="NIMA LOGISTICS company logo" class="logo" loading="lazy" />
+          <span class="company-name">NIMA LOGISTICS</span>
+        </a>
+      </div>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="faq.html" class="nav-link">FAQ</a>
+        <a href="index.html#info" class="nav-link">Info</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="background-image:url('../assets/hero.jpg');height:28vh;">
+      <div class="hero-overlay" style="height:28vh;display:flex;align-items:center;">
+        <div class="container">
+          <h1 class="hero-title">News & Events</h1>
+          <p class="hero-subtitle">Stay updated with our latest company news and upcoming events</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured News Banner -->
+    <section class="featured-news" aria-label="Featured News">
+      <div class="featured-news-img" style="background-image:url('../assets/warehouse.jpg');"></div>
+      <div class="featured-news-content">
+        <span class="news-date-badge">Apr 2024</span>
+        <span class="news-tag">Featured</span>
+        <h2 style="margin:0.5rem 0 1rem 0;">New Warehouse Opened in Mombasa</h2>
+        <p style="margin-bottom:1.2rem;">We are excited to announce the opening of our new state-of-the-art warehouse in Mombasa, expanding our storage and distribution capabilities for East Africa. This facility features advanced inventory management and 24/7 security.</p>
+        <a href="#" class="read-more-btn">Read Full Story</a>
+      </div>
+    </section>
+
+    <!-- News Grid -->
+    <section class="news-section" style="padding:2rem 0 0 0;">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center;margin-bottom:2rem;">Latest News</h2>
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-image" style="background-image:url('../assets/customsclearance.jpg');"></div>
+            <div class="news-content">
+              <span class="news-date-badge">Mar 2024</span>
+              <span class="news-tag">Award</span>
+              <h3>Awarded KRA Trusted Partner Status</h3>
+              <p>NIMA LOGISTICS has been recognized as a KRA Trusted Partner, ensuring faster customs clearance and enhanced reliability for our clients.</p>
+              <a href="#" class="read-more-btn">Read More</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-image" style="background-image:url('../assets/airfreight.jpg');"></div>
+            <div class="news-content">
+              <span class="news-date-badge">Feb 2024</span>
+              <span class="news-tag">Update</span>
+              <h3>Express Air Freight Expansion</h3>
+              <p>We have expanded our express air freight network to cover more destinations, offering even faster delivery times for urgent shipments.</p>
+              <a href="#" class="read-more-btn">Read More</a>
+            </div>
+          </article>
+          <article class="news-card">
+            <div class="news-image" style="background-image:url('../assets/projectlogistics.jpg');"></div>
+            <div class="news-content">
+              <span class="news-date-badge">Jan 2024</span>
+              <span class="news-tag">Project</span>
+              <h3>Major Project Cargo Delivered</h3>
+              <p>Our team successfully managed the delivery of oversized project cargo for a major infrastructure project in Nairobi.</p>
+              <a href="#" class="read-more-btn">Read More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Grid -->
+    <section class="events-section" style="padding:3rem 0 2rem 0;background:#f1f5f9;">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center;margin-bottom:2rem;">Upcoming Events</h2>
+        <div class="events-grid">
+          <div class="event-card">
+            <div class="event-image" style="background-image:url('../assets/landfreight.jpg');"></div>
+            <div class="event-content">
+              <span class="event-date-badge">June 15, 2024</span>
+              <span class="event-tag">Expo</span>
+              <h3>Logistics Africa Expo 2024</h3>
+              <p>Join us at the largest logistics expo in Africa to discover our latest solutions and meet our team in person.</p>
+              <a href="#" class="register-btn">Register</a>
+            </div>
+          </div>
+          <div class="event-card">
+            <div class="event-image" style="background-image:url('../assets/expressshipping.jpg');"></div>
+            <div class="event-content">
+              <span class="event-date-badge">May 10, 2024</span>
+              <span class="event-tag">Webinar</span>
+              <h3>Webinar: Digital Transformation in Logistics</h3>
+              <p>Learn how digital tools are reshaping the logistics industry in this free online webinar hosted by NIMA LOGISTICS.</p>
+              <a href="#" class="register-btn">Register</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Detail Modals (hidden by default) -->
+  <div id="modal-overlay" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(30,41,59,0.65);z-index:1000;align-items:center;justify-content:center;">
+    <div id="modal-content" style="background:#fff;border-radius:16px;max-width:500px;width:90vw;box-shadow:0 8px 32px rgba(30,58,138,0.18);padding:2rem 1.5rem;position:relative;">
+      <button id="modal-close" aria-label="Close" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.7rem;color:#1e3a8a;cursor:pointer;">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Newsletter Signup -->
+  <section style="background:#f8fafc;padding:2.5rem 0 2rem 0;margin-top:3rem;">
+    <div class="container" style="max-width:500px;text-align:center;">
+      <h2 style="font-size:1.5rem;font-weight:600;margin-bottom:0.7rem;">Subscribe to Our Newsletter</h2>
+      <p style="margin-bottom:1.2rem;font-size:1.05rem;">Get the latest news, events, and updates from NIMA LOGISTICS straight to your inbox.</p>
+      <form id="newsletter-form" autocomplete="off" style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;">
+        <input type="email" name="email" required placeholder="Your email address" style="padding:0.7rem 1rem;border-radius:8px;border:1px solid #cbd5e1;font-size:1rem;min-width:220px;">
+        <button type="submit" class="btn-primary" style="padding:0.7rem 1.5rem;font-size:1rem;border-radius:8px;">Subscribe</button>
+      </form>
+      <div id="newsletter-msg" style="margin-top:1rem;font-size:1rem;color:#1e3a8a;"></div>
+    </div>
+  </section>
+
+  <!-- Archive Section -->
+  <section style="padding:2rem 0 1rem 0;">
+    <div class="container" style="max-width:900px;">
+      <button id="archive-toggle" style="background:#3b82f6;color:#fff;padding:0.6rem 1.2rem;border:none;border-radius:8px;font-size:1rem;font-weight:500;cursor:pointer;margin-bottom:1rem;">Show Archive</button>
+      <div id="archive-section" style="display:none;background:#f1f5f9;padding:1.5rem 1rem;border-radius:12px;">
+        <h3 style="margin-bottom:1rem;">Archive</h3>
+        <ul style="list-style:disc inside;">
+          <li><strong>Dec 2023:</strong> <span style="color:#1e3a8a;">ISO 9001 Certification Achieved</span></li>
+          <li><strong>Oct 2023:</strong> <span style="color:#1e3a8a;">Participated in East Africa Logistics Summit</span></li>
+          <li><strong>Aug 2023:</strong> <span style="color:#1e3a8a;">Launched Express Shipping Service</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" style="background:#1e3a8a;color:#fff;padding:2.5rem 0 1.2rem 0;">
+    <div class="container" style="max-width:1100px;margin:0 auto;">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:2rem 1.5rem;">
+        <div style="display:flex;align-items:center;gap:1rem;min-width:220px;">
+          <img src="../assets/nimalogo.jpg" alt="NIMA LOGISTICS company logo" style="height:48px;width:auto;border-radius:8px;box-shadow:0 2px 8px rgba(30,58,138,0.10);background:#fff;padding:2px;" loading="lazy">
+          <div>
+            <span style="font-weight:600;font-size:1.1rem;letter-spacing:0.01em;">NIMA LOGISTICS</span><br>
+            <span style="font-size:0.95rem;opacity:0.8;">Your Global logistics solutions</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:2.5rem;flex-wrap:wrap;">
+          <div>
+            <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.7rem;">Services</h3>
+            <a href="services/airfreight.html" style="color:#fff;opacity:0.85;text-decoration:none;display:block;margin-bottom:0.3rem;font-size:0.95rem;">Air Freight</a>
+            <a href="services/oceanfreight.html" style="color:#fff;opacity:0.85;text-decoration:none;display:block;margin-bottom:0.3rem;font-size:0.95rem;">Ocean Freight</a>
+            <a href="services/customsclearance.html" style="color:#fff;opacity:0.85;text-decoration:none;display:block;font-size:0.95rem;">Customs Clearance</a>
+          </div>
+          <div>
+            <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.7rem;">Company</h3>
+            <a href="about.html" style="color:#fff;opacity:0.85;text-decoration:none;display:block;margin-bottom:0.3rem;font-size:0.95rem;">About Us</a>
+            <a href="#" style="color:#fff;opacity:0.85;text-decoration:none;display:block;margin-bottom:0.3rem;font-size:0.95rem;">Careers</a>
+            <a href="#" style="color:#fff;opacity:0.85;text-decoration:none;display:block;font-size:0.95rem;">Contact</a>
+          </div>
+        </div>
+      </div>
+      <hr style="border:none;border-top:1px solid rgba(255,255,255,0.12);margin:2rem 0 1rem 0;">
+      <p style="text-align:center;font-size:0.97rem;opacity:0.8;margin:0;">© 2025 NIMA LOGISTICS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Modal logic
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modalContent = document.getElementById('modal-content');
+    const modalBody = document.getElementById('modal-body');
+    const modalClose = document.getElementById('modal-close');
+    function openModal(contentHtml) {
+      modalBody.innerHTML = contentHtml;
+      modalOverlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      modalClose.focus();
+    }
+    function closeModal() {
+      modalOverlay.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    modalClose.onclick = closeModal;
+    modalOverlay.onclick = function(e) { if (e.target === modalOverlay) closeModal(); };
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+
+    // News/Event modal triggers
+    document.querySelectorAll('.read-more-btn').forEach((btn, i) => {
+      btn.onclick = function(e) {
+        e.preventDefault();
+        const modals = [
+          `<h2>New Warehouse Opened in Mombasa</h2><p><em>April 2024</em></p><img src='../assets/warehouse.jpg' alt='Warehouse' style='width:100%;border-radius:10px;margin-bottom:1rem;'><p>We are excited to announce the opening of our new state-of-the-art warehouse in Mombasa, expanding our storage and distribution capabilities for East Africa. This facility features advanced inventory management and 24/7 security.</p><div style='margin:1.2rem 0;'><button class='share-btn' data-title='New Warehouse Opened in Mombasa'>Share</button></div>`,
+          `<h2>Awarded KRA Trusted Partner Status</h2><p><em>March 2024</em></p><img src='../assets/customsclearance.jpg' alt='KRA Award' style='width:100%;border-radius:10px;margin-bottom:1rem;'><p>NIMA LOGISTICS has been recognized as a KRA Trusted Partner, ensuring faster customs clearance and enhanced reliability for our clients.</p><div style='margin:1.2rem 0;'><button class='share-btn' data-title='Awarded KRA Trusted Partner Status'>Share</button></div>`,
+          `<h2>Express Air Freight Expansion</h2><p><em>Feb 2024</em></p><img src='../assets/airfreight.jpg' alt='Air Freight' style='width:100%;border-radius:10px;margin-bottom:1rem;'><p>We have expanded our express air freight network to cover more destinations, offering even faster delivery times for urgent shipments.</p><div style='margin:1.2rem 0;'><button class='share-btn' data-title='Express Air Freight Expansion'>Share</button></div>`,
+          `<h2>Major Project Cargo Delivered</h2><p><em>Jan 2024</em></p><img src='../assets/projectlogistics.jpg' alt='Project Cargo' style='width:100%;border-radius:10px;margin-bottom:1rem;'><p>Our team successfully managed the delivery of oversized project cargo for a major infrastructure project in Nairobi.</p><div style='margin:1.2rem 0;'><button class='share-btn' data-title='Major Project Cargo Delivered'>Share</button></div>`
+        ];
+        openModal(modals[i]);
+      };
+    });
+    document.querySelectorAll('.register-btn').forEach((btn, i) => {
+      btn.onclick = function(e) {
+        e.preventDefault();
+        const modals = [
+          `<h2>Logistics Africa Expo 2024</h2><p><em>June 15, 2024 | Nairobi, Kenya</em></p><img src='../assets/landfreight.jpg' alt='Expo' style='width:100%;border-radius:10px;margin-bottom:1rem;'><p>Join us at the largest logistics expo in Africa to discover our latest solutions and meet our team in person.</p><a href='#' class='btn-primary' style='margin-top:1rem;display:inline-block;'>Register Now</a><div style='margin:1.2rem 0;'><button class='share-btn' data-title='Logistics Africa Expo 2024'>Share</button></div>`,
+          `<h2>Webinar: Digital Transformation in Logistics</h2><p><em>May 10, 2024 | Online</em></p><img src='../assets/expressshipping.jpg' alt='Webinar' style='width:100%;border-radius:10px;margin-bottom:1rem;'><p>Learn how digital tools are reshaping the logistics industry in this free online webinar hosted by NIMA LOGISTICS.</p><a href='#' class='btn-primary' style='margin-top:1rem;display:inline-block;'>Register Now</a><div style='margin:1.2rem 0;'><button class='share-btn' data-title='Webinar: Digital Transformation in Logistics'>Share</button></div>`
+        ];
+        openModal(modals[i]);
+      };
+    });
+    // Social sharing (simple demo)
+    document.addEventListener('click', function(e) {
+      if (e.target.classList.contains('share-btn')) {
+        const title = e.target.getAttribute('data-title');
+        modalBody.innerHTML += `<div style='margin-top:1.2rem;'><span style='font-weight:600;'>Share:</span> <a href='https://wa.me/?text=${encodeURIComponent(title)}' target='_blank' style='margin:0 0.5rem;'>WhatsApp</a> <a href='https://www.linkedin.com/shareArticle?mini=true&url=https://nimalogistics.com/news.html&title=${encodeURIComponent(title)}' target='_blank' style='margin:0 0.5rem;'>LinkedIn</a> <a href='https://www.facebook.com/sharer/sharer.php?u=https://nimalogistics.com/news.html' target='_blank' style='margin:0 0.5rem;'>Facebook</a></div>`;
+        e.target.style.display = 'none';
+      }
+    });
+    // Newsletter form (demo only)
+    document.getElementById('newsletter-form').onsubmit = function(e) {
+      e.preventDefault();
+      document.getElementById('newsletter-msg').textContent = 'Thank you for subscribing!';
+      this.reset();
+    };
+    // Archive toggle
+    document.getElementById('archive-toggle').onclick = function() {
+      const sec = document.getElementById('archive-section');
+      if (sec.style.display === 'none') {
+        sec.style.display = 'block';
+        this.textContent = 'Hide Archive';
+      } else {
+        sec.style.display = 'none';
+        this.textContent = 'Show Archive';
+      }
+    };
+  </script>
+</body>
+</html> 
