@@ -107,7 +107,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 1rem;
-  color: #1f2937;
+  color: #f3f4f5;
 }
 
 /* Container */
@@ -115,6 +115,193 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+/* --- Enhanced LCL/FCL Page Styles --- */
+
+/* Card Styles for LCL/FCL Options */
+.lcl-option, .fcl-option {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30, 58, 138, 0.08);
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-left: 8px solid #3b82f6; /* LCL default */
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.fcl-option {
+  border-left: 8px solid #10b981; /* FCL green */
+}
+.lcl-option:hover, .fcl-option:hover {
+  box-shadow: 0 8px 32px rgba(30, 58, 138, 0.16);
+  transform: translateY(-4px) scale(1.01);
+}
+
+.lcl-option h3, .fcl-option h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.lcl-option p, .fcl-option p {
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+/* Container Features as Cards */
+.container-feature {
+  background: #f8fafc;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(59, 130, 246, 0.06);
+  padding: 1.5rem 1.2rem;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.container-feature:hover {
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.13);
+  transform: translateY(-2px) scale(1.01);
+}
+
+/* Section Separation */
+section {
+  margin-bottom: 2.5rem;
+}
+
+section.bg-white {
+  background: #fff;
+}
+section.bg-gray-50 {
+  background: #f3f4f6;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2.7rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+  letter-spacing: -1px;
+}
+
+/* Comparison Section */
+.service-comparison {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30, 58, 138, 0.08);
+  padding: 2.5rem 2rem;
+  margin-top: 1.5rem;
+}
+.comparison-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 1.1rem 1rem;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 1px 4px rgba(59, 130, 246, 0.04);
+}
+.comparison-item i {
+  font-size: 1.7rem;
+  color: #3b82f6;
+  margin-top: 0.2rem;
+}
+
+/* Typography Improvements */
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -0.5px;
+}
+p, li {
+  font-size: 1.08rem;
+  color: #374151;
+  line-height: 1.7;
+}
+
+/* Button Tweaks */
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  color: #fff;
+  padding: 1rem 2.2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.13);
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1e40af, #3b82f6);
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.18);
+}
+.btn-secondary {
+  border: 2px solid #fff;
+  color: #fff;
+  background: rgba(30, 58, 138, 0.18);
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1rem 2.2rem;
+  transition: background 0.3s, color 0.3s;
+}
+.btn-secondary:hover {
+  background: #fff;
+  color: #1e3a8a;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 1024px) {
+  .lcl-option, .fcl-option, .service-comparison {
+    padding: 1.5rem 1rem;
+  }
+  .section-title {
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 768px) {
+  .lcl-option, .fcl-option, .service-comparison {
+    padding: 1.1rem 0.5rem;
+  }
+  .container-feature {
+    padding: 1rem 0.7rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Footer Styling */
+.footer {
+  background: #1e3a8a;
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  margin-top: 2.5rem;
+}
+.footer .credit a {
+  color: #3b82f6;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.footer .credit a:hover {
+  color: #fff;
+}
+
+/* Ensure all footer text and links remain white and not underlined */
+.footer, .footer *, .footer .credit a, .footer .credit a:hover {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* Ensure all text in the hero section is white */
+.lcl-hero, .lcl-hero h1, .lcl-hero h2, .lcl-hero h3, .lcl-hero h4, .lcl-hero p, .lcl-hero .btn-primary, .lcl-hero .btn-secondary {
+  color: #fff !important;
+}
+
+.lcl-hero .btn-primary {
+  border: 2px solid #fff;
+}
+
+.lcl-hero .btn-secondary {
+  border: 2px solid #fff;
+  background: rgba(255,255,255,0.12);
 }
 
 /* Responsive Design */

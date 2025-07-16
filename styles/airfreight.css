@@ -777,3 +777,21 @@ html {
     box-shadow: none;
   }
 }
+
+/* Fix footer display: solid background, white text, no border, no extra padding */
+.footer, .footer *, .footer .credit a, .footer .credit a:hover {
+  background: var(--primary) !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  font-size: 1rem !important;
+}
+.footer {
+  padding: 2rem 0 1rem 0 !important;
+  margin-top: 2rem !important;
+  border: none !important;
+  box-shadow: none !important;
+}

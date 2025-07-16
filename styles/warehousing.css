@@ -51,6 +51,14 @@
   font-size: 1.5rem;
 }
 
+/* Fix contrast for security-item text */
+.security-item, .security-item h4, .security-item p, .security-item div {
+  color: #1f2937 !important;
+}
+.security-item i {
+  color: #3b82f6 !important;
+}
+
 /* Additional Warehousing Styles */
 .warehouse-hero .hero-title {
   font-size: 3.5rem;

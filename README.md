@@ -7,7 +7,6 @@ A comprehensive logistics website showcasing NIMA LOGISTICS's complete range of 
 - **Responsive Design** - Optimized for desktop, tablet, and mobile devices
 - **Service Pages** - Detailed information for each logistics service
 - **Contact Forms** - Integrated contact and quote request forms
-- **Admin Panel** - Backend administration for managing contacts and bookings
 - **Email Integration** - PHP mail() function for automated email responses
 - **Modern UI/UX** - Clean, professional design with smooth animations
 
@@ -54,12 +53,6 @@ nima-logistics/
 │   │   ├── submit_contact.php         # Contact form handler
 │   │   ├── submit_contact_smtp.php    # SMTP contact handler
 │   │   └── debug_contact.php          # Debug contact handler
-│   ├── 📁 admin/                      # Admin panel
-│   │   ├── admin_login.php            # Admin login
-│   │   ├── admin_logout.php           # Admin logout
-│   │   ├── admin_contacts.php         # Contact management
-│   │   ├── admin_bookings.php         # Booking management
-│   │   └── view_contacts.php          # View contacts
 │   ├── 📁 tests/                      # Test files
 │   │   ├── test_email_send.php        # Email testing
 │   │   └── check_logs.php             # Log checking
@@ -210,7 +203,6 @@ The website is fully responsive with:
 - Form validation and sanitization
 - CSRF protection
 - Secure email handling
-- Admin authentication
 - Input sanitization
 
 ## 📊 Performance
