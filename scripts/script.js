@@ -100,11 +100,22 @@ document.addEventListener('DOMContentLoaded', function() {
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');
 const header = document.querySelector('.header');
+const navLinksMobile = document.querySelectorAll('.main-nav a');
 
     if (navToggle && mainNav) {
 navToggle.addEventListener('click', () => {
   mainNav.classList.toggle('active');
   document.body.classList.toggle('nav-open');
+});
+// Auto-close menu on link click (mobile)
+navLinksMobile.forEach(link => {
+  link.addEventListener('click', () => {
+    if (mainNav.classList.contains('active')) {
+      mainNav.classList.remove('active');
+      navToggle.classList.remove('active');
+      document.body.classList.remove('nav-open');
+    }
+  });
 });
     }
 

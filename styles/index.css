@@ -234,15 +234,18 @@ body {
     gap: 0.5rem;
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-20px);
-    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(-20px) scale(0.98);
+    transition: opacity 0.35s cubic-bezier(0.4,0,0.2,1), transform 0.35s cubic-bezier(0.4,0,0.2,1);
     z-index: 1100;
   }
-
   .main-nav.active {
     opacity: 1;
     pointer-events: auto;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
+  }
+  body.nav-open {
+    overflow: hidden;
+    touch-action: none;
   }
   .main-nav .menu-brand {
     position: absolute;
