@@ -127,3 +127,15 @@
     font-size: 1.1rem;
   }
 } 
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0;
+}
+.company-name {
+  text-align: left;
+  margin-left: 0.5rem;
+} 

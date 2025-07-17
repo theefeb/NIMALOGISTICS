@@ -51,6 +51,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .logo-container {
@@ -60,7 +61,7 @@ body {
 }
 
 .logo {
-  height: 3rem;
+  height: 7rem;
   width: auto;
 }
 
@@ -68,6 +69,8 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0;
+  text-align: left;
+  margin-left: 0.5rem;
 }
 
 .main-nav {
@@ -611,7 +614,8 @@ body {
   }
 
   .logo {
-    height: 2.5rem;
+    height: 3rem;
+    width: auto;
   }
 
   .company-name {
