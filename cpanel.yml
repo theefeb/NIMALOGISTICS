@@ -5,6 +5,11 @@ deployment:
     - cp pages/*.html $DEPLOYPATH/
     - mkdir -p $DEPLOYPATH/services
     - cp pages/services/*.html $DEPLOYPATH/services/
+    - cp pages/about/*.html $DEPLOYPATH/about/
+    - cp pages/contact/*.html $DEPLOYPATH/contact/
+    - cp pages/index.html $DEPLOYPATH/
+    - cp pages/services/*.html $DEPLOYPATH/services/
+    - cp pages/services/*.html $DEPLOYPATH/services/  
     # Uncomment the following lines if you use Composer or npm:
     # - cd $DEPLOYPATH && composer install --no-dev
     # - cd $DEPLOYPATH && npm install && npm run build 
