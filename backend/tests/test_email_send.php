@@ -3,14 +3,14 @@
 echo "<h2>Testing Email Configuration</h2>";
 
 // Email configuration
-$to = "info@nimalogistics.com"; // Replace with your email
+$to = "nimalogisticsltd@gmail.com"; // Updated email
 $subject = "Test Email from NIMA Logistics Website";
 
 // Email headers
 $headers = array();
 $headers[] = "MIME-Version: 1.0";
 $headers[] = "Content-Type: text/html; charset=UTF-8";
-$headers[] = "From: NIMA Logistics Website <noreply@nimalogistics.com>";
+$headers[] = "From: NIMA Logistics Website <nimalogisticsltd@gmail.com>";
 $headers[] = "X-Mailer: PHP/" . phpversion();
 
 // Email body

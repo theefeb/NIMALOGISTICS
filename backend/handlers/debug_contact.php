@@ -46,14 +46,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Test email functionality
     echo "<h3>Email Functionality Test</h3>";
     
-    $to = "info@nimalogistics.com"; // Replace with your email
+    $to = "nimalogisticsltd@gmail.com"; // Updated email
     $subject = "Debug Test - Contact Form";
     
     // Email headers
     $headers = array();
     $headers[] = "MIME-Version: 1.0";
     $headers[] = "Content-Type: text/html; charset=UTF-8";
-    $headers[] = "From: NIMA Logistics Website <noreply@nimalogistics.com>";
+    $headers[] = "From: NIMA Logistics Website <nimalogisticsltd@gmail.com>";
     $headers[] = "Reply-To: {$email}";
     $headers[] = "X-Mailer: PHP/" . phpversion();
     

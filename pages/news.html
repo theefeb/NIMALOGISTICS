@@ -236,7 +236,7 @@
     document.addEventListener('click', function(e) {
       if (e.target.classList.contains('share-btn')) {
         const title = e.target.getAttribute('data-title');
-        modalBody.innerHTML += `<div style='margin-top:1.2rem;'><span style='font-weight:600;'>Share:</span> <a href='https://wa.me/?text=${encodeURIComponent(title)}' target='_blank' style='margin:0 0.5rem;'>WhatsApp</a> <a href='https://www.linkedin.com/shareArticle?mini=true&url=https://nimalogistics.com/news.html&title=${encodeURIComponent(title)}' target='_blank' style='margin:0 0.5rem;'>LinkedIn</a> <a href='https://www.facebook.com/sharer/sharer.php?u=https://nimalogistics.com/news.html' target='_blank' style='margin:0 0.5rem;'>Facebook</a></div>`;
+        modalBody.innerHTML += `<div style='margin-top:1.2rem;'><span style='font-weight:600;'>Share:</span> <a href='https://wa.me/?text=${encodeURIComponent(title)}' target='_blank' style='margin:0 0.5rem;'>WhatsApp</a> <a href='https://www.linkedin.com/shareArticle?mini=true&url=https://nimalogistics.co.ke/news.html&title=${encodeURIComponent(title)}' target='_blank' style='margin:0 0.5rem;'>LinkedIn</a> <a href='https://www.facebook.com/sharer/sharer.php?u=https://nimalogistics.co.ke/news.html' target='_blank' style='margin:0 0.5rem;'>Facebook</a></div>`;
         e.target.style.display = 'none';
       }
     });

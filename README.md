@@ -228,10 +228,10 @@ This project is proprietary software for NIMA LOGISTICS.
 ## 📞 Contact
 
 **NIMA LOGISTICS**
-- **Phone:** +254 0710736123 (Nimrod) / +254 0721570058 (Mark)
-- **Email:** info@nimalogistics.com
+- **Phone:** +254 710736123 (Nimrod) / +254 702364009
+- **Email:** nimalogisticsltd@gmail.com
 - **Address:** JKIA Cargo Terminal, Fourth Season Building, 4th Floor Rm 18, Nairobi - Kenya
-- **Website:** nimalogistics.com
+- **Website:** nimalogistics.co.ke
 
 ---
 

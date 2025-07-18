@@ -36,14 +36,14 @@ if ($name && $email && $message) {
     error_log("Database save result: " . ($db_success ? "SUCCESS" : "FAILED"));
     
     // Email notification using PHP mail() function
-    $to = "info@nimalogistics.com"; // Replace with your email
+    $to = "nimalogisticsltd@gmail.com"; // Updated email
     $subject = "New Contact Message from " . $name;
     
     // Email headers
     $headers = array();
     $headers[] = "MIME-Version: 1.0";
     $headers[] = "Content-Type: text/html; charset=UTF-8";
-    $headers[] = "From: NIMA Logistics Website <noreply@nimalogistics.com>";
+    $headers[] = "From: NIMA Logistics Website <nimalogisticsltd@gmail.com>";
     $headers[] = "Reply-To: {$email}";
     $headers[] = "X-Mailer: PHP/" . phpversion();
     

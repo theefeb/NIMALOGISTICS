@@ -31,7 +31,7 @@ if ($name && $email && $message) {
     $headers = array();
     $headers[] = "MIME-Version: 1.0";
     $headers[] = "Content-Type: text/html; charset=UTF-8";
-    $headers[] = "From: NIMA Logistics Website <noreply@nimalogistics.com>";
+    $headers[] = "From: NIMA Logistics Website <nimalogisticsltd@gmail.com>";
     $headers[] = "Reply-To: {$email}";
     $headers[] = "X-Mailer: PHP/" . phpversion();
     
