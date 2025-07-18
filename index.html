@@ -1,12 +1,438 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0; url=pages/index.html">
-    <title>Redirecting to NIMA LOGISTICS...</title>
-    <link rel="icon" type="image/jpeg" href="assets/nimalogo.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NIMA LOGISTICS provides fast, reliable air, sea, and land freight, customs clearance, and warehousing services in Kenya and East Africa. Trusted by 500+ companies.">
+  <meta name="keywords" content="logistics, air freight, ocean freight, customs clearance, shipping, cargo, Kenya, global logistics, NIMA LOGISTICS">
+  <meta property="og:title" content="NIMA LOGISTICS | Kenya’s Trusted Air, Sea & Land Freight Solutions" />
+  <meta property="og:description" content="NIMA LOGISTICS provides fast, reliable air, sea, and land freight, customs clearance, and warehousing services in Kenya and East Africa. Trusted by 500+ companies." />
+  <meta property="og:image" content="https://nimalogistics.co.ke/assets/nimalogo.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nimalogistics.co.ke/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NIMA LOGISTICS | Kenya’s Trusted Air, Sea & Land Freight Solutions" />
+  <meta name="twitter:description" content="NIMA LOGISTICS provides fast, reliable air, sea, and land freight, customs clearance, and warehousing services in Kenya and East Africa. Trusted by 500+ companies." />
+  <meta name="twitter:image" content="https://nimalogistics.co.ke/assets/nimalogo.jpg" />
+  <meta name="twitter:url" content="https://nimalogistics.co.ke/" />
+  <title>NIMA LOGISTICS | Kenya’s Trusted Air, Sea & Land Freight Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="icon" href="assets/nimalogo.png" type="image/png">
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
 </head>
 <body>
-    <p>If you are not redirected automatically, <a href="pages/index.html">click here</a>.</p>
+<!-- Header -->
+<header class="header">
+  <div class="container header-container">
+    <div class="logo-container">
+      <a href="index.html" style="display: flex; align-items: center; gap: 1rem; text-decoration: none; color: inherit;">
+        <img src="assets/nimalogo.png" alt="NIMA LOGISTICS company logo" class="logo" loading="lazy" />
+        <span class="company-name">NIMA LOGISTICS</span>
+      </a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+
+    <nav class="main-nav" aria-label="Main Navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="faq.html" class="nav-link">FAQ</a>
+      <a href="#info" class="nav-link">Info</a>
+    </nav>
+  </div>
+</header>
+  
+  <main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay">
+        <div class="container">
+          <div style="text-align:center;max-width:900px;margin:0 auto;">
+            <h1 class="hero-title" style="margin-bottom:1rem;">Transform Your Global Logistics</h1>
+            <p class="hero-subtitle" style="margin-bottom:1.5rem;">Experience seamless international shipping with Kenya's most trusted logistics partner. We make freight management efficient, cost-effective, and worry-free.</p>
+            <p class="text-light" style="margin-bottom:2rem;"><strong>CREATIVE • SIMPLE • CARING</strong></p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+              <a href="#services" class="btn-primary" style="background:transparent;border:2px solid #fff;">Explore Services</a>
+            </div>
+            <div style="margin-top:2rem;padding:1rem;background:rgba(255,255,255,0.1);border-radius:8px;">
+              <p style="margin:0;font-size:0.9rem;">Trusted by 500+ companies across East Africa</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Services Section -->
+    <section id="services" class="services" style="padding:4rem 0;">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center;margin-bottom:1rem;">Our Complete Logistics Solutions</h2>
+        <p style="text-align:center;margin-bottom:3rem;max-width:800px;margin-left:auto;margin-right:auto;font-size:1.1rem;">
+          From air freight to warehousing, we provide end-to-end logistics solutions that adapt to your unique needs.
+        </p>
+        <div class="services-grid">
+      <!-- Air Freight Card -->
+      <div class="service-card" style="background-image:url('assets/airfreight.jpg');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+        <div class="service-content">
+          <h4 class="service-title">Air Freight</h4>
+              <p class="service-description">Express air freight services for urgent shipments with 24-72 hour delivery to major global destinations.</p>
+              <div style="margin-top:1rem;">
+                <span class="bg-primary text-white" style="padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">Fastest Option</span>
+              </div>
+              <a href="services/airfreight.html" class="btn-primary service-btn">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Sea/Ocean Freight Card -->
+          <div class="service-card" style="background-image:url('assets/oceanfreight.jpg');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+            <div class="service-content">
+              <h4 class="service-title">Sea / Ocean Freight</h4>
+              <p class="service-description">Cost-effective sea shipping with FCL, LCL, and specialized cargo handling for large shipments worldwide.</p>
+              <div style="margin-top:1rem;">
+                <span class="bg-primary text-white" style="padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">Most Affordable</span>
+              </div>
+              <a href="services/oceanfreight.html" class="btn-primary service-btn">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Land Freight Card -->
+          <div class="service-card" style="background-image:url('assets/landfreight.jpg');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+            <div class="service-content">
+              <h4 class="service-title">Land Freight</h4>
+              <p class="service-description">Comprehensive land transportation solutions across East Africa with reliable delivery schedules and tracking.</p>
+              <div style="margin-top:1rem;">
+                <span class="bg-primary text-white" style="padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">Regional Expert</span>
+              </div>
+              <a href="services/landfreight.html" class="btn-primary service-btn">Learn More</a>
+            </div>
+          </div>
+
+
+          <!-- Warehousing Card -->
+          <div class="service-card" style="background-image:url('assets/warehouse.jpg');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+            <div class="service-content">
+              <h4 class="service-title">Warehousing</h4>
+              <p class="service-description">Secure storage facilities with advanced inventory management and just-in-time delivery options.</p>
+              <div style="margin-top:1rem;">
+                <span class="bg-primary text-white" style="padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">24/7 Security</span>
+              </div>
+              <a href="services/warehousing.html" class="btn-primary service-btn">Learn More</a>
+        </div>
+      </div>
+
+          <!-- Buyers Consolidation Card -->
+          <div class="service-card" style="background-image:url('assets/buyersconsolidation.jpg');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+        <div class="service-content">
+              <h4 class="service-title">Buyers Consolidation</h4>
+              <p class="service-description">Consolidate multiple shipments from various suppliers into single containers for cost optimization.</p>
+              <div style="margin-top:1rem;">
+                <span class="bg-primary text-white" style="padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">Cost Savings</span>
+              </div>
+              <a href="services/buyersconsolidation.html" class="btn-primary service-btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Customs Clearance Card -->
+      <div class="service-card" style="background-image:url('assets/customsclearance.jpg');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+            <div class="service-content">
+              <h4 class="service-title">Custom Clearance</h4>
+              <p class="service-description">Streamlined customs processing with pre-cleared documentation for faster border transitions.</p>
+              <div style="margin-top:1rem;">
+                <span class="bg-primary text-white" style="padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">KRA Partner</span>
+              </div>
+              <a href="services/customsclearance.html" class="btn-primary service-btn">Learn More</a>
+            </div>
+          </div>
+
+          <!-- LCL Consolidation & FCL Card -->
+          <div class="service-card" style="background-image:url('assets/lclconsolidation.jpg');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+            <div class="service-content">
+              <h4 class="service-title">LCL Consolidation & FCL</h4>
+              <p class="service-description">Flexible container solutions - Less than Container Load (LCL) and Full Container Load (FCL) services.</p>
+              <div style="margin-top:1rem;">
+                <span class="bg-primary text-white" style="padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">Flexible Options</span>
+              </div>
+              <a href="services/lclconsolidation.html" class="btn-primary service-btn">Learn More</a>
+            </div>
+          </div>
+
+          <!-- Project Logistics Card -->
+          <div class="service-card" style="background-image:url('assets/projectlogistics.jpg');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+            <div class="service-content">
+              <h4 class="service-title">Project Logistics</h4>
+              <p class="service-description">Specialized handling for oversized, heavy, and complex project cargo with end-to-end management.</p>
+              <div style="margin-top:1rem;">
+                <span class="bg-primary text-white" style="padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">Expert Team</span>
+              </div>
+              <a href="services/projectlogistics.html" class="btn-primary service-btn">Learn More</a>
+            </div>
+          </div>
+
+                    <!-- International Freight and Forwarding Card -->
+          <div class="service-card" style="background-image:url('assets/internationalfreihtandforwading.jpg');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+        <div class="service-content">
+              <h4 class="service-title">International Freight & Forwarding</h4>
+              <p class="service-description">Complete international logistics solutions with door-to-door service and global network coverage.</p>
+              <div style="margin-top:1rem;">
+                <span class="bg-primary text-white" style="padding:0.3rem 0.8rem;border-radius:20px;font-size:0.8rem;">Global Network</span>
+              </div>
+              <a href="services/internationalfreight.html" class="btn-primary service-btn">Learn More</a>
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Why Choose Us Section -->
+    <section class="bg-white" style="padding:4rem 0;">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center;margin-bottom:3rem;">Our process and solutions</h2>
+        
+        <!-- Tab Navigation -->
+        <div class="tab-navigation" style="display:flex;justify-content:center;margin-bottom:3rem;flex-wrap:wrap;gap:0.5rem;">
+          <button class="tab-btn active" data-tab="process" style="padding:1rem 2rem;background:#3b82f6;color:white;border:none;border-radius:8px;cursor:pointer;transition:all 0.3s ease;font-weight:500;">How We Work</button>
+          <button class="tab-btn" data-tab="trust" style="padding:1rem 2rem;background:#e5e7eb;color:#374151;border:none;border-radius:8px;cursor:pointer;transition:all 0.3s ease;font-weight:500;">Why Choose Us</button>
+          <button class="tab-btn" data-tab="problems" style="padding:1rem 2rem;background:#e5e7eb;color:#374151;border:none;border-radius:8px;cursor:pointer;transition:all 0.3s ease;font-weight:500;">Problems We Solve</button>
+          <button class="tab-btn" data-tab="solutions" style="padding:1rem 2rem;background:#e5e7eb;color:#374151;border:none;border-radius:8px;cursor:pointer;transition:all 0.3s ease;font-weight:500;">Our Solutions</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <!-- Process Tab -->
+          <div id="process" class="tab-panel active">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;">
+              <div style="text-align:center;padding:2rem;background:#f8fafc;border-radius:12px;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div class="bg-primary text-primary" style="color:#1e3a8a;width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1rem;background:#f8fafc;border:2px solid #1e3a8a;">1</div>
+                <h3 class="text-primary" style="margin-bottom:1rem;">Consultation</h3>
+                <p>We understand your logistics needs and provide customized solutions that fit your business requirements.</p>
+              </div>
+              <div style="text-align:center;padding:2rem;background:#f8fafc;border-radius:12px;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div class="bg-primary text-primary" style="color:#1e3a8a;width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1rem;background:#f8fafc;border:2px solid #1e3a8a;">2</div>
+                <h3 class="text-primary" style="margin-bottom:1rem;">Planning</h3>
+                <p>Our experts create optimized logistics plans with the best routes, carriers, and cost-effective solutions.</p>
+              </div>
+              <div style="text-align:center;padding:2rem;background:#f8fafc;border-radius:12px;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div class="bg-primary text-primary" style="color:#1e3a8a;width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1rem;background:#f8fafc;border:2px solid #1e3a8a;">3</div>
+                <h3 class="text-primary" style="margin-bottom:1rem;">Execution</h3>
+                <p>We handle everything from pickup to delivery with real-time tracking and proactive communication.</p>
+              </div>
+              <div style="text-align:center;padding:2rem;background:#f8fafc;border-radius:12px;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div class="bg-primary text-primary" style="color:#1e3a8a;width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 1rem;background:#f8fafc;border:2px solid #1e3a8a;">4</div>
+                <h3 class="text-primary" style="margin-bottom:1rem;">Support</h3>
+                <p>Ongoing support and optimization to ensure your logistics continue to meet your evolving needs.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust Signals Tab -->
+          <div id="trust" class="tab-panel">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;text-align:center;">
+              <div style="padding:2rem;background:#f8fafc;border-radius:12px;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:3rem;margin-bottom:1rem;">🏆</div>
+                <h3 style="margin-bottom:0.5rem;color:#1e40af;">10+ Years Experience</h3>
+                <p>Decade of excellence in global logistics</p>
+              </div>
+              <div style="padding:2rem;background:#f8fafc;border-radius:12px;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:3rem;margin-bottom:1rem;">🌍</div>
+                <h3 style="margin-bottom:0.5rem;color:#1e40af;">50+ Countries</h3>
+                <p>Global network and partnerships</p>
+              </div>
+              <div style="padding:2rem;background:#f8fafc;border-radius:12px;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:3rem;margin-bottom:1rem;">📦</div>
+                <h3 style="margin-bottom:0.5rem;color:#1e40af;">10,000+ Shipments</h3>
+                <p>Successfully delivered worldwide</p>
+              </div>
+              <div style="padding:2rem;background:#f8fafc;border-radius:12px;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:3rem;margin-bottom:1rem;">⭐</div>
+                <h3 style="margin-bottom:0.5rem;color:#1e40af;">98% Satisfaction</h3>
+                <p>Customer satisfaction rate</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Problems Tab -->
+          <div id="problems" class="tab-panel">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;">
+              <div style="text-align:center;padding:2rem;background:#fef2f2;border-radius:12px;border-left:4px solid #ef4444;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:3rem;margin-bottom:1rem;">⏰</div>
+                <h3 style="margin-bottom:1rem;color:#dc2626;">Delays & Inefficiencies</h3>
+                <p>Slow customs clearance and poor coordination causing shipment delays and lost opportunities.</p>
+              </div>
+              <div style="text-align:center;padding:2rem;background:#fef2f2;border-radius:12px;border-left:4px solid #ef4444;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:3rem;margin-bottom:1rem;">💰</div>
+                <h3 style="margin-bottom:1rem;color:#dc2626;">Hidden Costs</h3>
+                <p>Unexpected fees, poor documentation, and inefficient routes eating into your profit margins.</p>
+              </div>
+              <div style="text-align:center;padding:2rem;background:#fef2f2;border-radius:12px;border-left:4px solid #ef4444;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:3rem;margin-bottom:1rem;">📞</div>
+                <h3 style="margin-bottom:1rem;color:#dc2626;">Poor Communication</h3>
+                <p>Lack of real-time updates and poor customer service leaving you in the dark about your shipments.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solutions Tab -->
+          <div id="solutions" class="tab-panel">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;">
+              <div style="text-align:center;padding:2rem;background:#f0f9ff;border-radius:12px;border-left:4px solid #3b82f6;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:3rem;margin-bottom:1rem;">🚀</div>
+                <h3 style="margin-bottom:1rem;color:#1e40af;">Lightning-Fast Processing</h3>
+                <p>Our established network with KRA and partners ensures 24-48 hour customs clearance and efficient routing.</p>
+              </div>
+              <div style="text-align:center;padding:2rem;background:#f0f9ff;border-radius:12px;border-left:4px solid #3b82f6;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:3rem;margin-bottom:1rem;">💎</div>
+                <h3 style="margin-bottom:1rem;color:#1e40af;">Cost-Effective Solutions</h3>
+                <p>Transparent pricing, optimized routes, and bulk consolidation help you save up to 30% on shipping costs.</p>
+              </div>
+              <div style="text-align:center;padding:2rem;background:#f0f9ff;border-radius:12px;border-left:4px solid #3b82f6;transition:transform 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                <div style="font-size:3rem;margin-bottom:1rem;">📱</div>
+                <h3 style="margin-bottom:1rem;color:#1e40af;">Real-Time Updates</h3>
+                <p>24/7 tracking, proactive communication, and dedicated account managers keep you informed every step.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Info Section (without contact form) -->
+<section id="info" class="info-section">
+  <div class="container">
+    <div class="info-container">
+      <!-- Services Column -->
+      <div class="info-block">
+        <h3 class="info-heading">Our Services</h3>
+        <ul>
+          <li><a href="services/airfreight.html">Air Freight</a></li>
+          <li><a href="services/oceanfreight.html">Sea / Ocean Freight</a></li>
+          <li><a href="services/landfreight.html">Land Freight</a></li>
+          <li><a href="services/landfreight.html">Road Transportation</a></li>
+          <li><a href="services/warehousing.html">Warehousing</a></li>
+          <li><a href="services/buyersconsolidation.html">Buyers Consolidation</a></li>
+          <li><a href="services/customsclearance.html">Custom Clearance</a></li>
+          <li><a href="services/lclconsolidation.html">LCL Consolidation & FCL</a></li>
+          <li><a href="services/projectlogistics.html">Project Logistics</a></li>
+          <li><a href="services/internationalfreight.html">International Freight & Forwarding</a></li>
+        </ul>
+      </div>
+
+      <!-- Information Column -->
+      <div class="info-block">
+        <h3 class="info-heading">Information</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="news.html">News & Events</a></li>
+        </ul>
+        
+        <!-- Downloads Section -->
+        <div class="resources" style="margin-top: 2rem;">
+          <h4 style="color: white; margin-bottom: 1rem; font-weight: var(--font-weight-semibold);">Downloads</h4>
+          <ul>
+            <li>
+              <a href="assets/Nima logistics company profile _20250717_124224_0000.pdf" download class="download-link">
+                <i class="fas fa-file-pdf"></i> Company Profile (PDF)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact Info Column -->
+      <div class="info-block">
+        <h3 class="info-heading">Contact Info</h3>
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <span class="contact-label">Tel:</span>
+            <a href="tel:+254710736123">+254710736123</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <span class="contact-label">Tel:</span>
+            <a href="tel:+254702364009">+254702364009</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span class="contact-label">Email:</span>
+            <a href="mailto:nimalogisticsltd@gmail.com">nimalogisticsltd@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="contact-label">Address:</span>
+            <span>JKIA Cargo Terminal, Fourth Season Building, 2nd Floor B2/B2B, Nairobi - Kenya</span>
+        </div>
+        </div>
+        <div class="info-social">
+          <a href="https://www.facebook.com/profile.php?id=61578710482345" class="info-social-link"><i class="fab fa-facebook-f"></i> Facebook</a>
+          <a href="https://www.instagram.com/nimalogistics?igsh=MTI0dXV5Z3V2bDQ5cA==" class="info-social-link"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="https://x.com/LimitedNima?s=09" class="info-social-link"><i class="fab fa-x-twitter"></i> X</a>
+          <a href="https://www.linkedin.com/in/nima-logistics-limited-1657b9347?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="info-social-link"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- Stylish Location Card Section -->
+<div class="location-card">
+  <div class="location-header">
+    <i class="fas fa-map-marker-alt"></i>
+    <span>Our Location</span>
+  </div>
+  <div class="location-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.7600000000002!2d36.821946!3d-1.292066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d000000000%3A0x0000000000000000!2sNairobi!5e0!3m2!1sen!2ske!4v0000000000000" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+  <div class="location-address">
+    <strong>📍 Address:</strong> JKIA Cargo Terminal, Fourth Season Building, 2nd Floor B2/B2B, Nairobi - Kenya
+  </div>
+</div>
+
+   
+
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/254702364009" target="_blank" class="whatsapp-button" aria-label="Chat with us on WhatsApp">
+        <span class="whatsapp-icon">💬</span>
+        <span class="whatsapp-text">Chat with us</span>
+    </a>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 NIMA LOGISTICS. All rights reserved.</p>
+    <p class="credit"><a href="#" tabindex="0">made by Mcave</a></p>
+  </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;width:100%;background:#222;color:#fff;padding:1em;text-align:center;z-index:1000;">
+    This website uses cookies to ensure you get the best experience. <button onclick="document.getElementById('cookieConsent').style.display='none'" style="margin-left:1em;padding:0.5em 1em;">OK</button>
+  </div>
+  <script>
+  window.onload = function() {
+    if (!localStorage.getItem('cookieConsent')) {
+      document.getElementById('cookieConsent').style.display = 'block';
+    }
+    document.getElementById('cookieConsent').querySelector('button').onclick = function() {
+      localStorage.setItem('cookieConsent', '1');
+      document.getElementById('cookieConsent').style.display = 'none';
+    };
+  };
+  </script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>

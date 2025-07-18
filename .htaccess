@@ -4,7 +4,7 @@
 RewriteEngine On
 
 # Redirect root to pages/index.html
-RewriteRule ^$ pages/index.html [L,R=301]
+# RewriteRule ^$ pages/index.html [L,R=301]
 
 # Redirect old service URLs to new structure
 RewriteRule ^airfreight\.html$ pages/services/airfreight.html [L,R=301]
