@@ -1,0 +1,7 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home1/nimalogi/public_html
+    - /bin/cp -R * $DEPLOYPATH
+    # Uncomment the following lines if you use Composer or npm:
+    # - cd $DEPLOYPATH && composer install --no-dev
+    # - cd $DEPLOYPATH && npm install && npm run build 
