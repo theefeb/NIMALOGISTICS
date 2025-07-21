@@ -1965,7 +1965,7 @@ a[href^="mailto:"]:focus {
 
 .whatsapp-button {
   position: fixed;
-  right: 1.2rem;
+  left: 1.2rem;
   bottom: 1.2rem;
   z-index: 1200;
   background: #25d366;
@@ -1994,7 +1994,7 @@ a[href^="mailto:"]:focus {
 }
 @media (max-width: 480px) {
   .whatsapp-button {
-    right: 0.7rem;
+    left: 0.7rem;
     bottom: 0.7rem;
     padding: 0.6em 1em;
     font-size: 0.98em;
