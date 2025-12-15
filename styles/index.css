@@ -6,6 +6,10 @@
   --text: #1f2937;
   --light-bg: #eff6ff;
   --white: #ffffff;
+
+  /* Festive accent colors (temporary) */
+  --festive-red: #d32f2f;
+  --festive-gold: #ffb300;
   
   /* Font variables */
   --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -14,6 +18,50 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+}
+
+/* Thin festive announcement bar */
+.festive-bar {
+  background: linear-gradient(90deg, var(--festive-red), var(--festive-gold));
+  color: #fff;
+  text-align: center;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.festive-bar strong {
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Subtle festive accent for section titles and primary buttons */
+.section-title span,
+.btn-primary,
+.service-btn {
+  position: relative;
+}
+
+.section-title span::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 0.35rem auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--festive-red), var(--festive-gold));
+}
+
+.btn-primary,
+.service-btn {
+  background-color: var(--festive-red);
+  border-color: var(--festive-red);
+}
+
+.btn-primary:hover,
+.service-btn:hover {
+  background-color: #b71c1c;
+  border-color: #b71c1c;
+  box-shadow: 0 0 12px rgba(255, 179, 0, 0.5);
 }
 
 * {
@@ -457,18 +505,30 @@ body {
 }
 
 .service-btn:hover {
-  background: var(--primary-dark);
+  background: var(--festive-red);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 179, 0, 0.4);
+  border: 1px solid rgba(255, 179, 0, 0.5);
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 30px rgba(211, 47, 47, 0.2);
+  border-color: rgba(255, 179, 0, 0.4);
 }
 
 .service-card:hover::before {
   background: rgba(0, 0, 0, 0.3);
+  animation: festiveShimmer 2s ease-in-out infinite;
+}
+
+@keyframes festiveShimmer {
+  0%, 100% { 
+    box-shadow: inset 0 0 0 rgba(255, 179, 0, 0);
+  }
+  50% { 
+    box-shadow: inset 0 0 50px rgba(255, 179, 0, 0.1);
+  }
 }
 
 /* Service card background images */
@@ -567,6 +627,22 @@ body {
   text-align: center;
   padding: 2rem 0;
   margin-top: 2rem;
+  position: relative;
+}
+
+.footer .festive-greeting {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+.footer .festive-greeting::before {
+  content: '🎄 ';
+}
+
+.footer .festive-greeting::after {
+  content: ' 🎄';
 }
 
 /* Responsive design */
@@ -1968,24 +2044,40 @@ a[href^="mailto:"]:focus {
   left: 1.2rem;
   bottom: 1.2rem;
   z-index: 1200;
-  background: #25d366;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
   color: #fff;
   padding: 0.7em 1.2em;
   border-radius: 30px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18), 0 0 20px rgba(255, 179, 0, 0.3);
   display: flex;
   align-items: center;
   gap: 0.6em;
   font-weight: 600;
   font-size: 1.05em;
   text-decoration: none;
-  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+.whatsapp-button::before {
+  content: '🎄';
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 0.8em;
+  opacity: 0.7;
+  animation: festivePulse 2s ease-in-out infinite;
 }
 .whatsapp-button:hover, .whatsapp-button:focus {
-  background: #128c7e;
+  background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
   color: #fff;
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.22), 0 0 30px rgba(255, 179, 0, 0.5);
+  border-color: rgba(255, 179, 0, 0.5);
+}
+@keyframes festivePulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 1; }
 }
 .whatsapp-icon {
   font-size: 1.3em;
@@ -2317,3 +2409,88 @@ a[href^="mailto:"]:focus {
     padding: 0.7rem 0.5rem 0 0.5rem;
   }
 }
+
+/* Festive Cookie Banner Styling */
+#cookieConsent {
+  background: linear-gradient(135deg, #d32f2f 0%, #ffb300 100%) !important;
+  color: #fff !important;
+  padding: 1.2em !important;
+  text-align: center !important;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3) !important;
+  border-top: 3px solid rgba(255, 255, 255, 0.3) !important;
+  font-weight: 500 !important;
+}
+
+#cookieConsent button {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  border: 2px solid rgba(255, 255, 255, 0.4) !important;
+  padding: 0.6em 1.5em !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  margin-left: 1em !important;
+}
+
+#cookieConsent button:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  transform: scale(1.05) !important;
+}
+
+/* Subtle Animated Snowflakes */
+.snowflakes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  animation: snowfall linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(100vh) translateX(50px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Generate multiple snowflakes with different delays and speeds */
+.snowflake:nth-child(1) { left: 10%; animation-duration: 10s; animation-delay: 0s; }
+.snowflake:nth-child(2) { left: 20%; animation-duration: 12s; animation-delay: 1s; }
+.snowflake:nth-child(3) { left: 30%; animation-duration: 14s; animation-delay: 2s; }
+.snowflake:nth-child(4) { left: 40%; animation-duration: 11s; animation-delay: 0.5s; }
+.snowflake:nth-child(5) { left: 50%; animation-duration: 13s; animation-delay: 1.5s; }
+.snowflake:nth-child(6) { left: 60%; animation-duration: 15s; animation-delay: 2.5s; }
+.snowflake:nth-child(7) { left: 70%; animation-duration: 10s; animation-delay: 0.8s; }
+.snowflake:nth-child(8) { left: 80%; animation-duration: 12s; animation-delay: 1.8s; }
+.snowflake:nth-child(9) { left: 90%; animation-duration: 14s; animation-delay: 0.3s; }
+.snowflake:nth-child(10) { left: 15%; animation-duration: 11s; animation-delay: 1.2s; }
+.snowflake:nth-child(11) { left: 25%; animation-duration: 13s; animation-delay: 2.2s; }
+.snowflake:nth-child(12) { left: 35%; animation-duration: 12s; animation-delay: 0.7s; }
+.snowflake:nth-child(13) { left: 45%; animation-duration: 14s; animation-delay: 1.7s; }
+.snowflake:nth-child(14) { left: 55%; animation-duration: 10s; animation-delay: 0.4s; }
+.snowflake:nth-child(15) { left: 65%; animation-duration: 15s; animation-delay: 2.1s; }
+.snowflake:nth-child(16) { left: 75%; animation-duration: 11s; animation-delay: 0.9s; }
+.snowflake:nth-child(17) { left: 85%; animation-duration: 13s; animation-delay: 1.9s; }
+.snowflake:nth-child(18) { left: 95%; animation-duration: 12s; animation-delay: 0.6s; }
+.snowflake:nth-child(19) { left: 5%; animation-duration: 14s; animation-delay: 1.6s; }
+.snowflake:nth-child(20) { left: 55%; animation-duration: 11s; animation-delay: 2.3s; }
