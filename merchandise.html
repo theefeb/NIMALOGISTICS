@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NIMA Logistics | Merchandise</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/merch.css">
+</head>
+
+<body>
+
+<header class="hero">
+  <span class="badge">NIMA LOGISTICS</span>
+  <h1>Merchandise That Represents Our Standard</h1>
+  <p>Professionally branded items for staff identity and corporate gifting.</p>
+</header>
+
+<section class="section">
+  <div class="container center">
+    <h2>Why Our Merchandise Matters</h2>
+    <p class="lead">
+      Each item reflects professionalism, reliability, and pride in our operations.
+    </p>
+  </div>
+</section>
+
+<section class="section light-bg">
+  <div class="container">
+
+    <div class="filter-bar">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="clothing">Clothing</button>
+      <button class="filter" data-filter="office">Office</button>
+      <button class="filter" data-filter="gifts">Corporate Gifts</button>
+    </div>
+
+    <div class="merch-grid">
+
+      <div class="merch-card" data-category="clothing" data-material="Cotton" data-use="Staff & Events">
+        <img src="images/tshirt.jpg" alt="Branded T-Shirt" loading="lazy">
+        <div class="info">
+          <h3>Branded T-Shirt</h3>
+          <p>Comfortable cotton apparel.</p>
+          <span>Staff & Events</span>
+        </div>
+      </div>
+
+      <div class="merch-card" data-category="clothing" data-material="Fleece" data-use="Field Teams">
+        <img src="images/hoodie.jpg" alt="Premium Hoodie" loading="lazy">
+        <div class="info">
+          <h3>Premium Hoodie</h3>
+          <p>Durable and warm.</p>
+          <span>Staff Issued</span>
+        </div>
+      </div>
+
+      <div class="merch-card" data-category="office" data-material="Ceramic" data-use="Office & Gifts">
+        <img src="images/mug.jpg" alt="Logo Mug" loading="lazy">
+        <div class="info">
+          <h3>Logo Mug</h3>
+          <p>Everyday professional use.</p>
+          <span>Office</span>
+        </div>
+      </div>
+
+      <div class="merch-card" data-category="gifts" data-material="Nylon" data-use="Corporate Gifting">
+        <img src="images/backpack.jpg" alt="Branded Backpack" loading="lazy">
+        <div class="info">
+          <h3>Branded Backpack</h3>
+          <p>Built for logistics teams.</p>
+          <span>Corporate Gifts</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container center">
+    <h2>Where Our Merchandise Is Used</h2>
+    <div class="use-cases">
+      <div>👷 Workforce Identity</div>
+      <div>🤝 Client Relationships</div>
+      <div>🎯 Corporate Events</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Interested in NIMA Logistics Merchandise?</h2>
+  <p>Contact us for availability and customization.</p>
+  <a href="contact.html">Request Corporate Merchandise</a>
+</section>
+
+<footer>
+  © 2025 NIMA Logistics. All Rights Reserved.
+</footer>
+
+<!-- PRODUCT MODAL -->
+<div class="modal" id="modal">
+  <span class="close">&times;</span>
+  <div class="modal-content">
+    <img id="modalImg" alt="">
+    <div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <p><strong>Material:</strong> <span id="modalMaterial"></span></p>
+      <p><strong>Use:</strong> <span id="modalUse"></span></p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

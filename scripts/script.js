@@ -127,3 +127,74 @@ window.addEventListener('scroll', () => {
   }
     });
 });
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('show');
+  });
+}, { threshold: 0.1 });
+
+reveals.forEach(el => observer.observe(el));
+
+// Filter
+const filters = document.querySelectorAll('.filter');
+const cards = document.querySelectorAll('.merch-card');
+
+filters.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filters.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const type = btn.dataset.filter;
+    cards.forEach(card => {
+      card.style.display =
+        type === 'all' || card.dataset.category === type
+          ? 'block'
+          : 'none';
+    });
+  });
+});
+const filters = document.querySelectorAll(".filter");
+const cards = document.querySelectorAll(".merch-card");
+
+/* FILTERING */
+filters.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filters.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    cards.forEach(card => {
+      card.style.display =
+        btn.dataset.filter === "all" ||
+        card.dataset.category === btn.dataset.filter
+          ? "block"
+          : "none";
+    });
+  });
+});
+
+/* MODAL */
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modalImg");
+const modalTitle = document.getElementById("modalTitle");
+const modalDesc = document.getElementById("modalDesc");
+const modalMaterial = document.getElementById("modalMaterial");
+const modalUse = document.getElementById("modalUse");
+const closeBtn = document.querySelector(".close");
+
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+    modalImg.src = card.querySelector("img").src;
+    modalTitle.textContent = card.querySelector("h3").textContent;
+    modalDesc.textContent = card.querySelector("p").textContent;
+    modalMaterial.textContent = card.dataset.material;
+    modalUse.textContent = card.dataset.use;
+    modal.classList.add("show");
+  });
+});
+
+closeBtn.onclick = () => modal.classList.remove("show");
+modal.onclick = e => e.target === modal && modal.classList.remove("show");
+
