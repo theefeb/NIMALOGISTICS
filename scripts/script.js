@@ -138,6 +138,7 @@ const observer = new IntersectionObserver(entries => {
 
 reveals.forEach(el => observer.observe(el));
 
+<<<<<<< HEAD
 // Enhanced Filter and Search Functionality
 const filters = document.querySelectorAll('.filter');
 const cards = document.querySelectorAll('.merch-card');
@@ -209,10 +210,17 @@ function filterAndSearch() {
 }
 
 // Filter button handlers
+=======
+// Filter
+const filters = document.querySelectorAll('.filter');
+const cards = document.querySelectorAll('.merch-card');
+
+>>>>>>> 13714f994b12e7e9b999cbf9d286ecad5fe4c84e
 filters.forEach(btn => {
   btn.addEventListener('click', () => {
     filters.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
+<<<<<<< HEAD
     currentFilter = btn.dataset.filter;
     filterAndSearch();
   });
@@ -230,6 +238,36 @@ if (searchInput) {
 if (cards.length > 0) {
   updateProductCount();
 }
+=======
+
+    const type = btn.dataset.filter;
+    cards.forEach(card => {
+      card.style.display =
+        type === 'all' || card.dataset.category === type
+          ? 'block'
+          : 'none';
+    });
+  });
+});
+const filters = document.querySelectorAll(".filter");
+const cards = document.querySelectorAll(".merch-card");
+
+/* FILTERING */
+filters.forEach(btn => {
+  btn.addEventListener("click", () => {
+    filters.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    cards.forEach(card => {
+      card.style.display =
+        btn.dataset.filter === "all" ||
+        card.dataset.category === btn.dataset.filter
+          ? "block"
+          : "none";
+    });
+  });
+});
+>>>>>>> 13714f994b12e7e9b999cbf9d286ecad5fe4c84e
 
 /* MODAL */
 const modal = document.getElementById("modal");
@@ -242,14 +280,19 @@ const closeBtn = document.querySelector(".close");
 
 cards.forEach(card => {
   card.addEventListener("click", () => {
+<<<<<<< HEAD
     const img = card.querySelector("img");
     modalImg.src = img.src;
     modalImg.alt = img.alt;
+=======
+    modalImg.src = card.querySelector("img").src;
+>>>>>>> 13714f994b12e7e9b999cbf9d286ecad5fe4c84e
     modalTitle.textContent = card.querySelector("h3").textContent;
     modalDesc.textContent = card.querySelector("p").textContent;
     modalMaterial.textContent = card.dataset.material;
     modalUse.textContent = card.dataset.use;
     modal.classList.add("show");
+<<<<<<< HEAD
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
   });
 });
@@ -338,4 +381,11 @@ if (heroSlides.length > 0) {
     });
   });
 }
+=======
+  });
+});
+
+closeBtn.onclick = () => modal.classList.remove("show");
+modal.onclick = e => e.target === modal && modal.classList.remove("show");
+>>>>>>> 13714f994b12e7e9b999cbf9d286ecad5fe4c84e
 
