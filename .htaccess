@@ -2,18 +2,6 @@
 # ENABLE REWRITE
 # =====================================
 RewriteEngine On
-RewriteBase /
-
-# Redirect *.html to clean URLs (hides .html in address bar)
-RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
-RewriteRule ^ /%1 [R=301,L]
-
-# Serve extensionless URLs by mapping them to .html files
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !^/?$
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+)$ $1.html [L]
 
 # =====================================
 # FORCE HTTPS
@@ -29,28 +17,24 @@ RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
 # =====================================
 # REDIRECT .HTML TO CLEAN URL
+# example: /about.html -> /about
 # =====================================
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
 RewriteRule ^ %1 [R=301,L]
 
 # =====================================
-# REMOVE .HTML INTERNALLY
+# MAP CLEAN URL TO .HTML INTERNALLY
+# example: /about -> /about.html
 # =====================================
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^([^\.]+)$ $1.html [L]
+RewriteRule ^([^/.]+)$ $1.html [L]
 
 # =====================================
 # DEFAULT INDEX
 # =====================================
 DirectoryIndex index.html
-
-# =====================================
-# SERVE EXISTING FILES/FOLDERS
-# =====================================
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
 
 # =====================================
 # CUSTOM 404
