@@ -127,3 +127,215 @@ window.addEventListener('scroll', () => {
   }
     });
 });
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) e.target.classList.add('show');
+  });
+}, { threshold: 0.1 });
+
+reveals.forEach(el => observer.observe(el));
+
+// Enhanced Filter and Search Functionality (merchandise page only)
+const merchGrid = document.getElementById('merchGrid');
+if (merchGrid) {
+  const filters = document.querySelectorAll('.filter');
+  const cards = document.querySelectorAll('.merch-card');
+  const searchInput = document.getElementById('searchInput');
+  const countText = document.getElementById('countText');
+  let currentFilter = 'all';
+  let currentSearch = '';
+
+  // Update product count
+  function updateProductCount() {
+    if (!countText || !merchGrid) return;
+    const visibleCards = Array.from(cards).filter(card =>
+      !card.classList.contains('hidden')
+    );
+    const total = cards.length;
+    const visible = visibleCards.length;
+
+    if (visible === 0) {
+      if (!document.querySelector('.no-results')) {
+        const noResults = document.createElement('div');
+        noResults.className = 'no-results';
+        noResults.innerHTML = `
+          <span class="no-results-icon">🔍</span>
+          <h3>No products found</h3>
+          <p>Try adjusting your search or filter criteria</p>
+        `;
+        merchGrid.appendChild(noResults);
+      }
+      countText.innerHTML = `Showing <strong>0</strong> of <strong>${total}</strong> products`;
+    } else {
+      const noResults = document.querySelector('.no-results');
+      if (noResults) noResults.remove();
+      countText.innerHTML = `Showing <strong>${visible}</strong> of <strong>${total}</strong> products`;
+    }
+  }
+
+  // Filter and search function
+  function filterAndSearch() {
+    cards.forEach(card => {
+      const category = card.dataset.category;
+      const name = (card.dataset.name || '').toLowerCase();
+      const tags = (card.dataset.tags || '').toLowerCase();
+      const material = (card.dataset.material || '').toLowerCase();
+      const use = (card.dataset.use || '').toLowerCase();
+      const categoryMatch = currentFilter === 'all' || category === currentFilter;
+      const searchLower = currentSearch.toLowerCase();
+      const searchMatch = !currentSearch ||
+        name.includes(searchLower) ||
+        tags.includes(searchLower) ||
+        material.includes(searchLower) ||
+        use.includes(searchLower);
+      if (categoryMatch && searchMatch) {
+        card.classList.remove('hidden');
+        card.style.display = 'block';
+      } else {
+        card.classList.add('hidden');
+        card.style.display = 'none';
+      }
+    });
+    updateProductCount();
+  }
+
+  filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filters.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentFilter = btn.dataset.filter || 'all';
+      filterAndSearch();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      currentSearch = e.target.value.trim();
+      filterAndSearch();
+    });
+  }
+
+  if (cards.length > 0) {
+    updateProductCount();
+  }
+
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modalImg");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalDesc = document.getElementById("modalDesc");
+  const modalMaterial = document.getElementById("modalMaterial");
+  const modalUse = document.getElementById("modalUse");
+  const closeBtn = document.querySelector(".close");
+
+  if (modal && modalImg && modalTitle && modalDesc && modalMaterial && modalUse) {
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        const img = card.querySelector("img");
+        const descEl = card.querySelector(".info p");
+        if (img) {
+          modalImg.src = img.src;
+          modalImg.alt = img.alt;
+        }
+        const titleEl = card.querySelector("h3");
+        if (titleEl) modalTitle.textContent = titleEl.textContent;
+        if (descEl) modalDesc.textContent = descEl.textContent;
+        modalMaterial.textContent = card.dataset.material || '—';
+        modalUse.textContent = card.dataset.use || '—';
+        modal.classList.add("show");
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+  }
+
+  if (closeBtn && modal) {
+    closeBtn.onclick = () => {
+      modal.classList.remove("show");
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+  }
+
+  if (modal) {
+    modal.onclick = e => {
+      if (e.target === modal) {
+        modal.classList.remove("show");
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+    };
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.classList.contains('show')) {
+      modal.classList.remove("show");
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  });
+}
+
+// Hero Slideshow Functionality
+const heroSlides = document.querySelectorAll('.hero-slide');
+const heroIndicators = document.querySelectorAll('.hero-indicators .indicator');
+let currentSlide = 0;
+let slideInterval;
+
+function showSlide(index) {
+  // Remove active class from all slides and indicators
+  heroSlides.forEach(slide => slide.classList.remove('active'));
+  heroIndicators.forEach(indicator => indicator.classList.remove('active'));
+  
+  // Add active class to current slide and indicator
+  if (heroSlides[index]) {
+    heroSlides[index].classList.add('active');
+  }
+  if (heroIndicators[index]) {
+    heroIndicators[index].classList.add('active');
+  }
+  
+  currentSlide = index;
+}
+
+function nextSlide() {
+  const next = (currentSlide + 1) % heroSlides.length;
+  showSlide(next);
+}
+
+function startSlideshow() {
+  // Change slide every 5 seconds
+  slideInterval = setInterval(nextSlide, 5000);
+}
+
+function stopSlideshow() {
+  clearInterval(slideInterval);
+}
+
+// Initialize slideshow
+if (heroSlides.length > 0) {
+  // Show first slide
+  showSlide(0);
+  
+  // Start automatic slideshow
+  startSlideshow();
+  
+  // Pause on hover (optional - uncomment if desired)
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    hero.addEventListener('mouseenter', stopSlideshow);
+    hero.addEventListener('mouseleave', startSlideshow);
+  }
+  
+  // Indicator click handlers
+  heroIndicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      stopSlideshow();
+      showSlide(index);
+      startSlideshow();
+    });
+  });
+}
+
