@@ -1,13 +1,5 @@
-# Enable URL rewriting
-RewriteEngine On
-
-# Serve existing files and directories as-is
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
-
-# If the file or directory does not exist, show a 404 error
-ErrorDocument 404 /404.html
+# (Pretty URL rewriting temporarily disabled for hosting compatibility)
+# If you want to use extensionless URLs later, we can re‑enable safe rules here.
 
 # Security headers (optional)
 <IfModule mod_headers.c>
