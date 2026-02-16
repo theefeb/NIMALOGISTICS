@@ -138,6 +138,10 @@ const observer = new IntersectionObserver(entries => {
 
 reveals.forEach(el => observer.observe(el));
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3ae1ca080c571e321401fbe913b066eb48453f93
 // Enhanced Filter and Search Functionality (merchandise page only)
 const merchGrid = document.getElementById('merchGrid');
 if (merchGrid) {
@@ -278,6 +282,151 @@ if (merchGrid) {
   });
 }
 
+<<<<<<< HEAD
+=======
+=======
+// Enhanced Filter and Search Functionality
+const filters = document.querySelectorAll('.filter');
+const cards = document.querySelectorAll('.merch-card');
+const searchInput = document.getElementById('searchInput');
+const productCount = document.getElementById('productCount');
+const countText = document.getElementById('countText');
+const merchGrid = document.getElementById('merchGrid');
+let currentFilter = 'all';
+let currentSearch = '';
+
+// Update product count
+function updateProductCount() {
+  const visibleCards = Array.from(cards).filter(card => 
+    !card.classList.contains('hidden')
+  );
+  const total = cards.length;
+  const visible = visibleCards.length;
+  
+  if (visible === 0) {
+    if (!document.querySelector('.no-results')) {
+      const noResults = document.createElement('div');
+      noResults.className = 'no-results';
+      noResults.innerHTML = `
+        <span class="no-results-icon">🔍</span>
+        <h3>No products found</h3>
+        <p>Try adjusting your search or filter criteria</p>
+      `;
+      merchGrid.appendChild(noResults);
+    }
+    countText.innerHTML = `Showing <strong>0</strong> of <strong>${total}</strong> products`;
+  } else {
+    const noResults = document.querySelector('.no-results');
+    if (noResults) noResults.remove();
+    countText.innerHTML = `Showing <strong>${visible}</strong> of <strong>${total}</strong> products`;
+  }
+}
+
+// Filter and search function
+function filterAndSearch() {
+  cards.forEach(card => {
+    const category = card.dataset.category;
+    const name = (card.dataset.name || '').toLowerCase();
+    const tags = (card.dataset.tags || '').toLowerCase();
+    const material = (card.dataset.material || '').toLowerCase();
+    const use = (card.dataset.use || '').toLowerCase();
+    
+    // Check category filter
+    const categoryMatch = currentFilter === 'all' || category === currentFilter;
+    
+    // Check search query
+    const searchLower = currentSearch.toLowerCase();
+    const searchMatch = !currentSearch || 
+      name.includes(searchLower) || 
+      tags.includes(searchLower) ||
+      material.includes(searchLower) ||
+      use.includes(searchLower);
+    
+    // Show/hide card
+    if (categoryMatch && searchMatch) {
+      card.classList.remove('hidden');
+      card.style.display = 'block';
+    } else {
+      card.classList.add('hidden');
+      card.style.display = 'none';
+    }
+  });
+  
+  updateProductCount();
+}
+
+// Filter button handlers
+filters.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filters.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    filterAndSearch();
+  });
+});
+
+// Search input handler
+if (searchInput) {
+  searchInput.addEventListener('input', (e) => {
+    currentSearch = e.target.value.trim();
+    filterAndSearch();
+  });
+}
+
+// Initialize product count
+if (cards.length > 0) {
+  updateProductCount();
+}
+
+/* MODAL */
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modalImg");
+const modalTitle = document.getElementById("modalTitle");
+const modalDesc = document.getElementById("modalDesc");
+const modalMaterial = document.getElementById("modalMaterial");
+const modalUse = document.getElementById("modalUse");
+const closeBtn = document.querySelector(".close");
+
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+    const img = card.querySelector("img");
+    modalImg.src = img.src;
+    modalImg.alt = img.alt;
+    modalTitle.textContent = card.querySelector("h3").textContent;
+    modalDesc.textContent = card.querySelector("p").textContent;
+    modalMaterial.textContent = card.dataset.material;
+    modalUse.textContent = card.dataset.use;
+    modal.classList.add("show");
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+  });
+});
+
+if (closeBtn) {
+  closeBtn.onclick = () => {
+    modal.classList.remove("show");
+    document.body.style.overflow = ''; // Restore scrolling
+  };
+}
+
+if (modal) {
+  modal.onclick = e => {
+    if (e.target === modal) {
+      modal.classList.remove("show");
+      document.body.style.overflow = ''; // Restore scrolling
+    }
+  };
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modal && modal.classList.contains('show')) {
+    modal.classList.remove("show");
+    document.body.style.overflow = '';
+  }
+});
+
+>>>>>>> 84460b9ad6b9a9e29b2f6f25346fed64490214b6
+>>>>>>> 3ae1ca080c571e321401fbe913b066eb48453f93
 // Hero Slideshow Functionality
 const heroSlides = document.querySelectorAll('.hero-slide');
 const heroIndicators = document.querySelectorAll('.hero-indicators .indicator');

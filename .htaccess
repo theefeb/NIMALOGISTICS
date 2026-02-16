@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # (Pretty URL rewriting temporarily disabled for hosting compatibility)
 # If you want to use extensionless URLs later, we can re‑enable safe rules here.
 
@@ -32,3 +33,27 @@
     ExpiresByType image/gif "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
 </IfModule>
+=======
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Force non-www
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# Redirect .html to clean URL
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# Load .html file internally
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/.]+)$ $1.html [L]
+
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+>>>>>>> 3ae1ca080c571e321401fbe913b066eb48453f93
